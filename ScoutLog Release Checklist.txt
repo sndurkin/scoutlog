@@ -1,0 +1,124 @@
+ScoutLog: Release Checklist
+
+1. Test all usecases with these variations:
+  
+  * Android 4.4 and Android 5.0
+  * with airplane mode
+  * with "Destroy activities on exit"
+  
+  Features:
+    
+    - Nav drawer
+      -> Test device rotation
+      -> Ensure changing theme doesn't reopen nav drawer
+      -> Test display modes
+      -> Test navigation using browse and search
+    
+    - Settings
+      -> Test all settings except Account
+      -> Test Delete photos setting by deleting a single photo, deleting a single location, deleting multiple locations, and deleting via sync
+    
+    - Add new location
+      -> Test add using + button
+      -> Test add by placing marker on map
+      -> Test undo creating location
+    - Delete locations
+      -> Test deleting a single location and multiple locations
+      -> Test undo deleting multiple locations
+    - Sort locations
+      -> Test all sort options
+      
+    - Edit location title
+    - Edit location date
+    - Edit location tags
+      -> Test filtering via EditText
+      -> Test selecting/unselecting tags via ListView
+      -> Test unselecting tags via EditText
+      -> Test unselecting tags via deletion
+      -> Test color change of first tag (use both Save and Cancel)
+      -> Test unsaved changes dialog
+    - General select tags screen
+      -> Test 'Show Help' menu option
+      -> Test tag add button
+      -> Test tag quick add feature
+      -> Test tag undo delete
+      -> Test tag rename
+      -> Test color change
+      -> Test color remove
+      -> Test all sort options
+    - Navigation button on map
+    - Edit location address/coordinates
+      -> Test terrain toggle
+      -> Test current location button
+      -> Test zoom buttons, zoom with fingers
+      -> Test setting pin w/ address via search
+      -> Test setting pin w/ address via autocomplete
+      -> Test setting pin w/ coordinates by long click
+      -> Test unsaved changes dialog
+    - Edit location note
+      -> Test unsaved changes dialog
+    - Add photo
+      -> Test adding photo from gallery
+      -> Test adding photo via camera
+      -> Ensure inline message pops up when adding first photo for a location, and saving saves the data
+    - Edit photo notes
+      -> Test unsaved changes dialog
+    - Share photo
+    - Delete photo
+      -> Test undo delete
+    - Delete location
+      -> Test undo delete
+    
+    - Bulk edit tags
+      -> Test adding before
+      -> Test adding after
+      -> Test adding tag that already exists on a location
+      -> Test removing tag
+      -> Test same items under 'General select tags screen'
+    - Browse by tags
+      -> Test same items under 'General select tags screen'
+    - Export locations
+    - Sync
+      -> Test syncing against empty account
+      -> Test syncing multiple times - files should not be updated more than once
+      -> Test creating a tag
+      -> Test renaming a tag
+      -> Test changing a tag's color
+      -> Test deleting a tag
+      -> Test creating a location
+      -> Test changing a location's title
+      -> Test changing the address, notes, and date of a location
+      -> Test adding a tag to a location
+      -> Test removing a tag from a location
+      -> Test deleting a tag while still attached to a location
+      -> Test deleting a tag file from Google Drive
+      -> Test adding a photo to a location
+      -> Test removing a photo from a location
+      -> Test deleting a photo file from Google Drive
+      -> Test deleting a photo file from phone
+      -> Test syncing against populated account (with duplicate tag)
+      -> Test switching from one account to another (is everything properly synced to the new account?)
+    
+    - Check database to make sure there are no items that are marked tenatively deleted
+
+2. Execute all unit tests.
+
+3. Commit changes in git.
+
+4. Merge branch to master.
+
+5. Update Android version in AndroidManifest.xml.
+
+6. Create branch for new version.
+
+7. Generate new signed APK.
+
+8. Upload to Play Store; write the changelog in the "What's new" section; update the Play Store listing if new features are added.
+
+9. Update the website with the changelog.
+
+10. Update the Google+ beta test community with the changelog.
+
+11. Tweet the new update.
+
+12. Check email and the Responses XLS for anyone who A) requested features that were added and B) left their email; send out a mass email notifying them (using BCC).

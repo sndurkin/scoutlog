@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right|center_vertical"
+    android:background="?attr/swipeActionBackgroundColor">
+
+    <ImageButton
+        android:id="@+id/navigate_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/navigate_white"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+
+</LinearLayout>

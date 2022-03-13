@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <com.sndurkin.locationscout.HuePicker
+        android:id="@+id/hue_picker"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:progress="1"
+        android:background="@android:color/transparent"
+        android:progressDrawable="@android:color/transparent"
+        android:splitTrack="false"
+        android:max="360"
+        android:layerType="software"
+        tools:ignore="UnusedAttribute" />
+
+    <com.sndurkin.locationscout.SatValPicker
+        android:id="@+id/sat_val_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/sat_val_picker">
+
+        <View
+            android:id="@+id/current_color"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/new_color"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

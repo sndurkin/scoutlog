@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sndurkin.locationscout.Snackbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snackbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentBottom="true"
+    android:padding="24dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:maxHeight="80dp"
+        android:minWidth="288dp"
+        android:maxWidth="568dp"
+        android:orientation="horizontal"
+        android:background="?attr/snackbarTabletBackground">
+
+        <TextView
+            android:id="@+id/snackbar_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="?attr/snackbarTextColor" />
+
+        <TextView
+            android:id="@+id/snackbar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="?attr/snackbarButtonColor"
+            android:text="@string/undo"
+            android:background="?attr/invertedViewSelectorDrawable" />
+
+        <ImageView
+            android:id="@+id/snackbar_close_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:src="@drawable/snackbar_close"
+            android:background="?attr/invertedViewSelectorDrawable" />
+
+    </LinearLayout>
+
+</com.sndurkin.locationscout.Snackbar>

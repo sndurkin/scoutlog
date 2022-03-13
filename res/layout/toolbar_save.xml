@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal"
+    style="?attr/actionBarBottom">
+
+    <RelativeLayout
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        style="?attr/actionBarBottomButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@android:string/cancel"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:drawableLeft="@drawable/navigation_cancel_dark"
+            android:drawablePadding="12dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#aaa"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <RelativeLayout
+        android:id="@+id/action_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        style="?attr/actionBarBottomButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:textAllCaps="true"
+            android:drawableLeft="@drawable/navigation_accept_dark"
+            android:drawablePadding="12dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

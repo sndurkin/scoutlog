@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColorPrimary" format="reference" />
+    <attr name="textColorTertiary" format="reference" />
+
+    <attr name="actionBarBottom" format="reference" />
+    <attr name="actionBarBottomButton" format="reference" />
+    <attr name="actionBarTransparent" format="reference" />
+    <attr name="actionBarBottomTransparent" format="reference" />
+
+    <attr name="dateSpinner" format="reference" />
+    <attr name="galleryImageText" format="reference" />
+
+    <attr name="cardView" format="reference" />
+    <attr name="cardDivider" format="reference" />
+    <attr name="cardInlineAlertMessage" format="reference" />
+    <attr name="viewSelectorDrawable" format="reference" />
+    <attr name="invertedViewSelectorDrawable" format="reference" />
+
+    <attr name="navDrawerBackground" format="reference" />
+    <attr name="navDrawerItem" format="reference" />
+
+    <attr name="navDrawerListDrawable" format="reference" />
+    <attr name="navDrawerSelectedListDrawable" format="reference" />
+    <attr name="navDrawerGridDrawable" format="reference" />
+    <attr name="navDrawerSelectedGridDrawable" format="reference" />
+    <attr name="navDrawerMapDrawable" format="reference" />
+    <attr name="navDrawerSelectedMapDrawable" format="reference" />
+
+    <attr name="navDrawerLocationsDrawable" format="reference" />
+    <attr name="navDrawerTagsDrawable" format="reference" />
+    <attr name="navDrawerSearchDrawable" format="reference" />
+    <attr name="navDrawerSettingsDrawable" format="reference" />
+    <attr name="navDrawerSelectedDrawable" format="reference" />
+    <attr name="navDrawerSelectedLocationsDrawable" format="reference" />
+    <attr name="navDrawerSelectedTagsDrawable" format="reference" />
+    <attr name="navDrawerSelectedSearchDrawable" format="reference" />
+
+    <attr name="snackbarTextColor" format="reference" />
+    <attr name="snackbarButtonColor" format="reference" />
+    <attr name="snackbarBackgroundColor" format="reference" />
+    <attr name="snackbarTabletBackground" format="reference" />
+
+    <attr name="swipeActionBackgroundColor" format="reference" />
+    <attr name="errorTextColor" format="reference" />
+
+    <attr name="helpText" format="reference" />
+    <attr name="selectTagsHelpImage1" format="reference" />
+    <attr name="selectTagsHelpImage2" format="reference" />
+    <attr name="bulkEditTagsHelpImage1" format="reference" />
+    <attr name="bulkEditTagsHelpImage2" format="reference" />
+    <attr name="stickyCurrentLocationHelpImage1" format="reference" />
+    <attr name="stickyCurrentLocationHelpImage2" format="reference" />
+
+    <attr name="emptyListText" format="reference" />
+    <attr name="emptyLocationsButton" format="reference" />
+    <attr name="emptyTagsButton" format="reference" />
+    <attr name="emptyPhotosAddFromCameraButton" format="reference" />
+    <attr name="emptyPhotosAddFromGalleryButton" format="reference" />
+    <attr name="emptyPhotosButtonSeparator" format="reference" />
+
+    <attr name="imageDate" format="reference" />
+    <attr name="imageTime" format="reference" />
+    <attr name="iconDate" format="reference" />
+    <attr name="imageTags" format="reference" />
+    <attr name="imageNotes" format="reference" />
+    <attr name="imageLink" format="reference" />
+    <attr name="imageLocation" format="reference" />
+    <attr name="imageMissingPhoto" format="reference" />
+    <attr name="imageNoPhotoSet" format="reference" />
+    <attr name="menuOverflowButton" format="reference" />
+    <attr name="editButton" format="reference" />
+    <attr name="deleteButton" format="reference" />
+    <attr name="iconTags" format="reference" />
+    <attr name="iconTag" format="reference" />
+    <attr name="iconSearch" format="reference" />
+    <attr name="iconAddLocation" format="reference" />
+    <attr name="iconHelp" format="reference" />
+
+    <attr name="cardSeparatorBackgroundColor" format="reference" />
+    <attr name="separatorBackgroundColor" format="reference" />
+    <attr name="radioHeaderBackgroundColor" format="reference" />
+    
+    <declare-styleable name="MapViewPager">
+        <attr name="mapPosition" format="integer" />
+        <attr name="leftSwipeMarginWidth" format="dimension" />
+        <attr name="rightSwipeMarginWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ColorPicker">
+        <attr name="color_wheel_radius" format="dimension" />
+        <attr name="color_wheel_thickness" format="dimension" />
+        <attr name="color_center_radius" format="dimension" />
+        <attr name="color_center_halo_radius" format="dimension"/>
+        <attr name="color_pointer_radius" format="dimension" />
+        <attr name="color_pointer_halo_radius" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/detail_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <include layout="@layout/detail_title" />
+
+        <include layout="@layout/card_date" />
+
+        <include layout="@layout/card_tags" />
+
+        <include layout="@layout/card_address" />
+
+        <include layout="@layout/card_linked_locations" />
+
+        <include layout="@layout/card_notes" />
+
+    </LinearLayout>
+
+</ScrollView>

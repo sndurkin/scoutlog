@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.sndurkin.locationscout.settings.AppCompatListPreference
+        android:key="pref_cluster_threshold"
+        android:title="@string/pref_cluster_threshold_title"
+        android:entries="@array/pref_cluster_threshold_display_arr"
+        android:entryValues="@array/pref_cluster_threshold_value_arr"
+        android:defaultValue="10" />
+
+    <CheckBoxPreference
+        android:key="pref_sticky_current_location"
+        android:title="@string/pref_sticky_current_location_title"
+        android:summary="@string/pref_sticky_current_location_summary"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="pref_photos_location"
+        android:title="@string/pref_photos_location_title" />
+
+    <CheckBoxPreference
+        android:key="pref_notify_unsaved_changes"
+        android:title="@string/pref_notify_unsaved_changes_title"
+        android:summary="@string/pref_notify_unsaved_changes_summary"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="pref_reporting"
+        android:title="@string/pref_reporting_title"
+        android:summary="@string/pref_reporting_summary"
+        android:defaultValue="true" />
+
+</PreferenceScreen>

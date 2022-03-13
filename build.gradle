@@ -1,0 +1,134 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.3'
+
+        // Crashlytics plugin
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    // Google Play Services
+    compile 'com.google.android.gms:play-services-identity:9.0.2'
+    compile 'com.google.android.gms:play-services-analytics:9.0.2'
+    //compile('com.google.android.gms:play-services-drive:9.0.2')
+    compile 'com.google.android.gms:play-services-location:9.0.2'
+    compile 'com.google.android.gms:play-services-maps:9.0.2'
+    compile 'com.google.android.gms:play-services-auth:9.0.2'
+    // Android Map MiscUtils
+    compile 'com.google.maps.android:android-maps-utils:0.3.4'
+    // Support Libraries
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+
+    compile 'com.android.support:support-v13:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:support-annotations:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    // Glide
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+    // Material Design DateTimePicker
+    compile 'com.wdullaer:materialdatetimepicker:1.3.1'
+    // OkHttp
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    // Jsoup (for parsing HTML)
+    compile 'org.jsoup:jsoup:1.8.3'
+    // Crashlytics
+    compile('com.crashlytics.sdk.android:crashlytics:2.3.2@aar') {
+        transitive = true
+    }
+    // JARs
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.google.api-client:google-api-client:1.20.0'
+    compile 'com.google.apis:google-api-services-drive:v2-rev170-1.20.0'
+    // MultiDex
+    compile 'com.android.support:multidex:1.0.1'
+    // Testing
+    testCompile 'junit:junit:4.12'
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "21.1.2"
+
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    lintOptions {
+        disable 'MissingTranslation', 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId "com.sndurkin.locationscout"
+        minSdkVersion 15
+        targetSdkVersion 23
+
+        // This doesn't seem to be working for devices with Android < 21 on support library 23.4 with srcCompat:
+        // vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            multiDexEnabled true
+        }
+    }
+
+    productFlavors {
+        prod {
+            minSdkVersion 15
+        }
+        dev {
+            minSdkVersion 21
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+}

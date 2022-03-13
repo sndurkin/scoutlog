@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_copy_current_datetime"
+        android:title="@string/copy_current_datetime"
+        app:showAsAction="never">
+
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/menu_copy_date"
+                    android:title="@string/copy_date" />
+                <item
+                    android:id="@+id/menu_copy_time"
+                    android:title="@string/copy_time" />
+                <item
+                    android:id="@+id/menu_copy_datetime"
+                    android:title="@string/copy_datetime" />
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

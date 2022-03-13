@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sndurkin.locationscout.Snackbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snackbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:minHeight="48dp"
+    android:maxHeight="80dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="?attr/snackbarBackgroundColor"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/snackbar_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="?attr/snackbarTextColor"
+        android:text="@string/review_app_message" />
+
+    <TextView
+        android:id="@+id/snackbar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="?attr/snackbarButtonColor"
+        android:background="?attr/invertedViewSelectorDrawable"
+        android:text="@string/undo" />
+
+    <ImageView
+        android:id="@+id/snackbar_close_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:src="@drawable/snackbar_close"
+        android:background="?attr/invertedViewSelectorDrawable" />
+
+</com.sndurkin.locationscout.Snackbar>

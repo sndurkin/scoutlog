@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/list_map_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.sndurkin.locationscout.CustomSupportMapFragment" />
+
+    <ImageButton
+        android:id="@+id/map_toggle_terrain"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/map_overlay_icon"
+        android:src="@drawable/map_terrain_on"
+        android:contentDescription="@string/map_toggle_terrain_desc" />
+
+    <RelativeLayout
+        android:id="@+id/help_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?android:attr/windowBackground"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/help_screen_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.sndurkin.locationscout.CircleIndicatorView
+            android:id="@+id/help_screen_page_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:id="@+id/help_screen_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/help_screen_page_indicator"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="?android:textColorSecondary"
+            style="@android:style/Widget.Holo.Light.Button.Borderless.Small" />
+
+    </RelativeLayout>
+
+</FrameLayout>

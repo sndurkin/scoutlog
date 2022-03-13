@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:background="?attr/viewSelectorDrawable">
+
+    <LinearLayout
+        android:id="@+id/tag_item_text_ct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/tag_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tag_item_locations_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorTertiary" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tag_item_color"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/tag_item_text_ct"
+        android:layout_centerVertical="true"
+        android:background="@drawable/color_preview"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tag_item_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/tag_item_text_ct"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/tag_item_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="?attr/menuOverflowButton" />
+
+</RelativeLayout>

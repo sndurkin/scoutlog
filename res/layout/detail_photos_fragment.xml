@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/detail_photos_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/detail_photos_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:columnWidth="360dp"
+            android:stretchMode="columnWidth"
+            android:padding="6dp"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:gravity="center" />
+
+        <include layout="@layout/empty_photos_view" />
+
+    </LinearLayout>
+
+    <include layout="@layout/snackbar" />
+
+</RelativeLayout>

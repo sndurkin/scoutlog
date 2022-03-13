@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preference_color_preview_margin_holo">20dp</dimen>
+</resources>

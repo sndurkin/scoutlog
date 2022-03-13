@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="pref_account"
+        android:title="@string/pref_account_title" />
+
+    <CheckBoxPreference
+        android:key="pref_auto_sync"
+        android:title="@string/pref_auto_sync_title"
+        android:summary="@string/pref_auto_sync_summary"
+        android:enabled="false"
+        android:defaultValue="true" />
+
+    <Preference
+        android:key="pref_sync_now"
+        android:title="@string/pref_sync_now_title"
+        android:enabled="false" />
+
+    <PreferenceCategory android:title="@string/settings_advanced_category" />
+
+    <com.sndurkin.locationscout.settings.AppCompatListPreference
+        android:key="pref_photo_storage"
+        android:title="@string/pref_photo_storage_title"
+        android:entries="@array/pref_photo_storage_display_arr"
+        android:entryValues="@array/pref_photo_storage_value_arr"
+        android:defaultValue="0" />
+
+</PreferenceScreen>

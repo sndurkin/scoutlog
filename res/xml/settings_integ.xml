@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="pref_ignore_imported_duplicates"
+        android:title="@string/pref_ignore_imported_duplicates_title"
+        android:summary="@string/pref_ignore_imported_duplicates_summary"
+        android:defaultValue="true" />
+
+    <com.sndurkin.locationscout.settings.AppCompatListPreference
+        android:key="pref_import_multiple_photos"
+        android:title="@string/pref_import_multiple_photos_title"
+        android:entries="@array/pref_import_multiple_photos_display_arr"
+        android:entryValues="@array/pref_import_multiple_photos_value_arr"
+        android:defaultValue="2" />
+
+</PreferenceScreen>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head>
+    <title>Locations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #content {
+            margin: 30px auto;
+            width: 900px;
+        }
+        
+        .card {
+            width: 100%;
+            min-height: 50px;
+            background: #fff;
+            margin-bottom: 35px;
+            padding: 35px;
+            border-radius: 5px;
+            border-bottom: 2px solid #999;
+        }
+        
+        .card-title {
+            margin-top: 0;
+        }
+        
+        .card-body {
+            
+        }
+        
+        .card-image-row {
+            margin: 20px 0;
+        }
+        
+        .card-image {
+            display: block;
+            max-width: 200px;
+            max-height: 200px;
+            float: left;
+            margin-right: 20px;
+            border: 1px solid #999;
+            cursor: pointer;
+        }
+        
+        #overlay {
+            display: none;
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.8;
+        }
+        
+        #modal {
+            display: none;
+            margin: 0 auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        
+        #modal-header {
+            padding: 15px;
+            color: #fff;
+        }
+        
+        #modal-title {
+            float: left;
+        }
+        
+        #close-modal {
+            float: right;
+            line-height: 28px;
+            text-align: right;
+            cursor: pointer;
+        }
+        
+        #image {
+            border-radius: 5px;
+        }
+        
+        #image-help {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: #000 1px 1px;
+        }
+    </style>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript">
+        function $(id) {
+            var el = id;
+            if(typeof id == 'string') {
+                el = document.getElementById(id);
+            }
+            
+            return {
+                el: el,
+                position: function(v) {
+                    el.style.position = v;
+                    return this;
+                },
+                overflow: function(v) {
+                    el.style.overflow = v;
+                    return this;
+                },
+                width: function(v) {
+                    if(!v) {
+                        return el.clientWidth;
+                    }
+                    el.style.width = v + 'px';
+                    return this;
+                },
+                height: function(v) {
+                    if(!v) {
+                        return el.clientHeight;
+                    }
+                    el.style.height = v + 'px';
+                    return this;
+                },
+                margins: function(margins) {
+                    if(margins.top) {
+                        el.style.marginTop = margins.top + 'px';
+                    }
+                    if(margins.right) {
+                        el.style.marginRight = margins.right + 'px';
+                    }
+                    if(margins.bottom) {
+                        el.style.marginBottom = margins.bottom + 'px';
+                    }
+                    if(margins.left) {
+                        el.style.marginLeft = margins.left + 'px';
+                    }
+                    return this;
+                },
+                padding: function(padding) {
+                    if(padding.top) {
+                        el.style.paddingTop = padding.top + 'px';
+                    }
+                    if(padding.right) {
+                        el.style.paddingRight = padding.right + 'px';
+                    }
+                    if(padding.bottom) {
+                        el.style.paddingBottom = padding.bottom + 'px';
+                    }
+                    if(padding.left) {
+                        el.style.paddingLeft = padding.left + 'px';
+                    }
+                    return this;
+                },
+                left: function(v) {
+                    el.style.left = v + 'px';
+                    return this;
+                },
+                top: function(v) {
+                    el.style.top = v + 'px';
+                    return this;
+                },
+                show: function() {
+                    el.style.display = 'block';
+                    return this;
+                },
+                hide: function() {
+                    el.style.display = 'none';
+                    return this;
+                },
+                src: function(src) {
+                    el.src = src;
+                    return this;
+                },
+                load: function(callback, single) {
+                    el.onload = function() {
+                        callback();
+                        if(single) {
+                            el.onload = null;
+                        }
+                    }
+                },
+                click: function(callback, single) {
+                    el.onclick = callback;
+                    if(single) {
+                        el.onclick = null;
+                    }
+                },
+                html: function(html) {
+                    el.innerHTML = html;
+                    return this;
+                },
+                append: function(childEl) {
+                    el.appendChild(childEl);
+                    return this;
+                },
+                parent: function(cls) {
+                    if(!cls) {
+                        return $(el.parentNode);
+                    }
+                    else {
+                        var parent = $(el.parentNode);
+                        if(parent.hasClass(cls)) {
+                            return parent;
+                        }
+                        return parent.parent(cls);
+                    }
+                },
+                children: function(cls) {
+                    var children = [];
+                    for(var i = 0; i < el.children.length; ++i) {
+                        var child = $(el.children[i]);
+                        if(child.hasClass(cls)) {
+                            children.push(child);
+                        }
+                        else {
+                            children = children.concat(child.children(cls));
+                        }
+                    }
+                    return children;
+                },
+                hasClass: function(cls) {
+                    var classes = el.className.split(' ');
+                    for(var i = 0; i < classes.length; ++i) {
+                        if(classes[i] == cls) {
+                            return true;
+                        }
+                    }
+                    return false;
+                },
+                attr: function(a, b) {
+                    if(b !== undefined) {
+                        el.setAttribute(a, b);
+                        return this;
+                    }
+                    return el.getAttribute(a);
+                }
+            };
+        }
+        
+        function preventDefault(e) {
+            e = e || window.event;
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+            e.returnValue = false;  
+        }
+        
+        function showOverlay() {
+            $('overlay').show();
+            B.overflow('hidden');
+            
+            // Prevent mousewheel scrolling.
+            if (window.addEventListener) {
+                window.addEventListener('DOMMouseScroll', preventDefault, false);
+            }
+            window.onmousewheel = document.onmousewheel = preventDefault;
+        }
+        
+        function hideOverlay() {
+            $('overlay').hide();
+            B.overflow('auto');
+            
+            // Reenable mousewheel scrolling.
+            if (window.removeEventListener) {
+                window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            }
+            window.onmousewheel = document.onmousewheel = null;
+        }
+        
+        function showModal(targetImage) {
+            var idx = parseInt(targetImage.attr('imageIdx'));
+            var locationIdx = parseInt(targetImage.parent('card').attr('locationIdx'));
+            var images = data[locationIdx].images;
+            var imageSrc = images[idx];
+            
+            showOverlay();
+            
+            // Add listeners for the modal.
+            D.onkeyup = function(e) {
+                e = e || window.event;
+                
+                var keyCode = e.keyCode || e.which;
+                switch(keyCode) {
+                    case 27:
+                        // If the user presses Esc, hide the modal.
+                        hideModal();
+                        break;
+                    case 37:
+                        // If the user presses left arrow, open the previous image.
+                        if(idx > 0) {
+                            showModal(targetImage.parent('card').children('card-image')[--idx]);
+                        }
+                        else if(locationIdx > 0) {
+                            var prevCardImages = targetImage.parent('content').children('card')[--locationIdx].children('card-image');
+                            showModal(prevCardImages[prevCardImages.length - 1]);
+                        }
+                        
+                        $('image-help').hide();
+                        break;
+                    case 39:
+                        // If the user presses right arrow, open the next image.
+                        if(idx < images.length - 1) {
+                            showModal(targetImage.parent('card').children('card-image')[++idx]);
+                        }
+                        else if(locationIdx < data.length - 1) {
+                            var nextCardImages = targetImage.parent('content').children('card')[++locationIdx].children('card-image');
+                            showModal(nextCardImages[0]);
+                        }
+                        
+                        $('image-help').hide();
+                        break;
+                }
+            };
+            
+            var ratio = targetImage.el.naturalWidth / targetImage.el.naturalHeight;
+            var width = Math.min(viewportWidth() - 200, (viewportHeight() - 200) * ratio);
+            var height = width / ratio;
+            
+            var i = $('image');
+            i.width(width)
+             .height(height)
+             .src(imageSrc);
+            
+            $('modal-title').html(data[locationIdx].title);
+            
+            var m = $('modal');
+            m.show()
+             .left((viewportWidth() - m.width()) / 2)
+             .top((viewportHeight() - m.height()) / 2);
+        }
+        
+        function viewportWidth() {
+            return window.innerWidth || document.documentElement.clientWidth || B.width();
+        }
+        function viewportHeight() {
+            return window.innerHeight || document.documentElement.clientHeight || B.height();
+        }
+        
+        function hideModal() {
+            $('modal').hide();
+            hideOverlay();
+        }
+        
+        function onCardImageLoaded(e) {
+            var MAX_SIZE = 200;
+            
+            e = e || window.event;
+            var t = $(e.target || e.srcElement);
+            
+            var topAndBottomMargin = (MAX_SIZE - t.height()) / 2;
+            var leftAndRightMargin = (MAX_SIZE - t.width()) / 2;
+            t.margins({
+                top: topAndBottomMargin,
+                left: leftAndRightMargin,
+                right: leftAndRightMargin + 20, /* the extra 20 is there for all images */
+                bottom: topAndBottomMargin
+            });
+            
+            t.click(function() {
+                showModal(t);
+            });
+        }
+        
+        function init() {
+            D = document;
+            B = $(document.body);
+            
+            $('close-modal').click(hideModal);
+            
+            // Populate the DOM with the data.
+            for(var i = 0; i < data.length; ++i) {
+                var card = D.createElement('div');
+                card.className = 'card';
+                $(card).attr('locationIdx', i);
+                var html = [
+                    '<h2 class="card-title">', data[i].title, '</h2>',
+                    '<div class="card-body">'
+                ];
+                
+                var images = data[i].images;
+                for(var j = 0; j < images.length; ++j) {
+                    if(j % 4 == 0) {
+                        if(j > 0) {
+                            html.push('<div style="clear: both"></div></div>');
+                        }
+                        html.push('<div class="card-image-row">');
+                    }
+                    html.push(
+                        '<img class="card-image" src="' + images[j] + '" onload="onCardImageLoaded(event)" imageIdx="' + j + '"/>'
+                    );
+                }
+                if(j % 4 == 0) {
+                    html.push('<div style="clear: both"></div></div>');
+                }
+                
+                html.push(
+                        '<div style="clear: both"></div>',
+                    '</div>'
+                )
+                $(card).html(html.join(''));
+                $('content').append(card);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="content" class="content"></div>
+    <div id="overlay" onclick="hideModal()"></div>
+    <div id="modal">
+        <div id="modal-header">
+            <h2 id="modal-title"></h2>
+            <div id="close-modal">Close <span style="color:#999; font-size: 80%">(Esc)</span></div>
+            <div style="clear: both"></div>
+        </div>
+        <img id="image"/>
+        <div id="image-help">Tip: Use the left and right arrows to navigate between images.</div>
+    </div>
+</body>
+</html>    

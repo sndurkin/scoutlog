@@ -1,0 +1,768 @@
+<resources>
+    <string name="app_name">ScoutLog</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="always">Always</string>
+
+    <!-- Used in the navigation drawer -->
+    <string name="places">Places</string>
+    <!-- Used in the navigation drawer -->
+    <string name="browse_by_tags">Browse by Tags</string>
+    <!-- Used in the navigation drawer -->
+    <string name="search">Search</string>
+    <!-- Used in the navigation drawer -->
+    <string name="display_mode">Display mode:</string>
+    <!-- Used in the navigation drawer -->
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <!-- Used in the navigation drawer -->
+    <string name="close_drawer">Close Navigation Drawer</string>
+
+    <!-- Main screen title -->
+    <string name="places_title">Places</string>
+
+    <!-- Menu item for deleting selected places -->
+    <string name="menu_delete_places">Delete</string>
+    <!-- Menu item for selecting all places -->
+    <string name="menu_select_all">Select all</string>
+    <!-- Menu item for editing tags for all selected places -->
+    <string name="menu_edit_tags">Edit tags</string>
+
+    <!-- Menu item for exporting all selected places -->
+    <string name="menu_export">Export</string>
+    <!-- Menu item for exporting all selected places as a GPX file -->
+    <string name="menu_export_gpx">Export as GPX</string>
+    <!-- Menu item for exporting all selected places as a KML file -->
+    <string name="menu_export_kml">Export as KML</string>
+    <!-- Menu item for exporting all selected places as a CSV file -->
+    <string name="menu_export_csv">Export as CSV</string>
+    <!-- Dialog message indicating the app is currently in the process of saving places to a file -->
+    <string name="export_notification_title">Exporting places</string>
+    <!-- Dialog title indicating the app has encountered an error during the export process -->
+    <string name="export_failed_title">Export error</string>
+    <!-- Dialog message indicating the app has encountered an error during the export process -->
+    <string name="export_failed_message">There was an error while trying to export.</string>
+    <!-- Share dialog title; the share dialog is shown after exporting places to a GPX, KML or other file to allow users to share the file to another app -->
+    <string name="export_share_intent_title">Share file</string>
+
+    <!-- Checkbox for whether to include a header line in the CSV file -->
+    <string name="include_csv_header">Include CSV header</string>
+
+    <!-- Action to open a menu with sorting options -->
+    <string name="menu_sort">Sort</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_alpha">A - Z</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_reverse_alpha">Z - A</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_newest">Newest</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_oldest">Oldest</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_closest">Closest</string>
+    <!-- Sorting option for tags -->
+    <string name="menu_sort_most_places">Most places tagged</string>
+    <!-- Sorting option for tags -->
+    <string name="menu_sort_fewest_places">Fewest places tagged</string>
+
+    <!-- Indicates that a place has no title -->
+    <string name="untitled">(Untitled)</string>
+
+    <string name="empty_places_text">You don\'t have any saved places.</string>
+    <string name="empty_places_search_text">No places were found matching that search term.</string>
+    <!-- Action to create a new place -->
+    <string name="add_place">Add a new place</string>
+    <!-- Widget text to create a new place -->
+    <string name="add_place_widget">Add a place</string>
+    <!-- Widget text in the widget picker screen -->
+    <string name="add_place_widget_picker_title">Quick-add place</string>
+
+    <string name="no_google_play_services_title">Google Play Services not found</string>
+    <string name="no_google_play_services_message">Cannot find the Google Play services app.</string>
+
+    <string name="account_not_found_title">Google Account not found</string>
+    <string name="account_not_found_message">Your Google Drive account could not be found, so syncing will be disabled.</string>
+
+    <!-- Dialog title to warn user to set up syncing to Google Drive -->
+    <string name="sync_warning_dialog_title">Set up syncing</string>
+    <!-- Dialog message to warn user to set up syncing to Google Drive -->
+    <string name="sync_warning_dialog_message">You\'ve added more than 15 places to ScoutLog!\n\nIt\'s recommended that you set up syncing to ensure your data is protected in the cloud.</string>
+    <!-- Action to dismiss dialog -->
+    <string name="dismiss">Dismiss</string>
+    <!-- Dialog action to open sync settings screen -->
+    <string name="open_sync_settings">Open sync settings</string>
+    <!-- Dialog action to open settings screen -->
+    <string name="open_settings">Open settings</string>
+
+    <!-- Action for undoing something a user has done, like deleting a place -->
+    <string name="undo">Undo</string>
+    <!-- Message for indicating that the selected places were deleted. Example: "2 places deleted" -->
+    <plurals name="places_deleted_snackbar">
+        <item quantity="one">%1$d place deleted</item>
+        <item quantity="other">%1$d places deleted</item>
+    </plurals>
+
+    <!-- VERY rare message displayed to the user when selecting something in the navigation drawer fails -->
+    <string name="nav_action_failed">Navigation action failed</string>
+
+    <!-- Action that allows a user to create a new place where the pin is located on the map -->
+    <string name="new_place_desc">%1$s\n\nTap to create a new place here.</string>
+
+    <!-- The app is trying to get the device's latitude/longitude coordinates -->
+    <string name="waiting_for_location">Waiting for location…</string>
+    <!-- The app failed to get the device's latitude/longitude coordinates -->
+    <string name="location_request_failed">Failed to get location</string>
+    <!-- The app could not resolve the address of the latitude/longitude coordinates -->
+    <string name="address_unavailable">(Address unavailable right now)</string>
+    <!-- The app could not get the device's latitude/longitude coordinates when the user creates a new place, so there is no physical geolocation saved yet -->
+    <string name="no_location_set">(No location set)</string>
+    <!-- The app could not get the device's latitude/longitude coordinates when the user creates a new place, so there is no physical geolocation saved yet -->
+    <string name="no_location_set_toast">No location set</string>
+    <!-- Action to copy the latitude/longitude coordinates of the current place to the clipboard -->
+    <string name="copy_coordinates">Copy coordinates</string>
+    <!-- Action to copy the address text of the current place to the clipboard -->
+    <string name="copy_address">Copy address</string>
+    <!-- Message indicating that the latitude/longitude coordinates of the current place were copied to the clipboard -->
+    <string name="copied_coordinates">Copied coordinates</string>
+    <!-- Message indicating that the address text of the current place was copied to the clipboard -->
+    <string name="copied_address">Copied address</string>
+
+    <!-- Button description - the button switches between the normal map type and the satellite map type (which looks similar to Google Earth) -->
+    <string name="map_toggle_terrain_desc">Toggle the satellite hybrid map</string>
+
+    <!-- Android's location services are disabled and must be enabled by the user to fetch the device's latitude/longitude coordinates -->
+    <string name="location_services_disabled_title">Location services disabled</string>
+    <!-- Android's location services are disabled and must be enabled by the user to fetch the device's latitude/longitude coordinates -->
+    <string name="location_services_disabled_message">Location services need to be enabled to get your location.</string>
+    <!-- Action on a popup dialog -->
+    <string name="ignore">Ignore</string>
+    <!-- Action to open Android's settings -->
+    <string name="settings">Settings</string>
+
+    <string name="improve_location_accuracy_title">Improve location accuracy</string>
+    <string name="improve_location_accuracy_gps_message">You can improve the accuracy of your device\'s location by enabling GPS.</string>
+    <string name="improve_location_accuracy_wifi_message">You can improve the accuracy of your device\'s location by enabling WiFi.</string>
+
+    <!-- Dialog title indicating that the location request failed, so we cannot sort places by shortest distance -->
+    <string name="location_request_for_places_failed_title">Location update error</string>
+    <!-- Dialog title indicating that the location request failed, so we cannot sort places by shortest distance -->
+    <string name="location_request_for_places_failed_message">Failed to get an up-to-date location, so places could not be sorted by closest to you.</string>
+    <!-- Dialog action to try the location request again for sorting places by shortest distance -->
+    <string name="try_again">Try again</string>
+    <!-- Dialog action to close the dialog -->
+    <string name="close">Close</string>
+
+    <string name="sticky_current_location_help_screen_1">You have enabled the "Track your location" mode!\n\nIn this mode, when you tap the current location button, the map will stay centered on your location.</string>
+    <string name="sticky_current_location_help_screen_2">You can turn it off by tapping the current location button again, or by swiping around in the map.</string>
+    <string name="sticky_current_location_help_screen_3">Note that this feature will drain your battery if left on for long periods of time.</string>
+
+    <!-- Message title to suggest that the user switch to the list display for places (instead of a grid) -->
+    <string name="switch_display_mode_suggestion_title">Switch the display mode</string>
+    <!-- Message to suggest that the user switch to the list display for places (instead of a grid) -->
+    <string name="switch_display_mode_suggestion_message">You aren\'t adding photos for most of your places. You might want to switch to another display mode.</string>
+
+    <!-- Browse by Tags screen title -->
+    <string name="browse_by_tags_title">Browse by Tags</string>
+    <!-- Message for indicating that how many places are tagged with this tag. Example: "2 places" -->
+    <plurals name="num_places_tagged_text">
+        <item quantity="one">%1$d place</item>
+        <item quantity="other">%1$d places</item>
+    </plurals>
+
+    <!-- Indicates a collection of places that have no assigned tags -->
+    <string name="untagged_places">(Untagged)</string>
+    <!-- Indicates a collection of places that have no assigned tags -->
+    <string name="untagged_places_title">Untagged Places</string>
+
+    <!-- Action to create a new place -->
+    <string name="new_place">New Place</string>
+    <!-- Describes the title for the place -->
+    <string name="title">Title</string>
+    <!-- Action for setting the title for the place -->
+    <string name="set_title">Set Title</string>
+    <!-- Action for modifying the title for the place -->
+    <string name="edit_title">Edit Title</string>
+    <!-- Action for adding tags to the place -->
+    <string name="tags">Add tags</string>
+    <!-- Action for adding a note or description to the place -->
+    <string name="notes">Add a note</string>
+    <!-- Action for linking a place to the current one -->
+    <string name="linked_place">Link to another place</string>
+    <!-- Action for opening a date picker -->
+    <string name="pick_date">Choose a date for this place</string>
+    <!-- Title used when displaying the date for this place -->
+    <string name="date_title">Date</string>
+    <!-- Title used when displaying the notes for this place -->
+    <string name="notes_title">Notes</string>
+
+    <!-- Action to share the current place or photo -->
+    <string name="share_place">Share</string>
+    <!-- Indicates the current photo has been shared -->
+    <string name="share_text">Shared with the ScoutLog app</string>
+    <!-- Indicates the photo file does not exist on the device, so it cannot be shared -->
+    <string name="no_photo_for_sharing">No photo available to share</string>
+
+    <!-- Action to delete the current place -->
+    <string name="delete_place">Delete</string>
+
+    <!-- Action to navigate to the current latitude/longitude coordinates using some navigation app (like Google Maps) -->
+    <string name="navigate">Navigate</string>
+    <!-- Indicates that a navigation app (like Google Maps) was not found on the device -->
+    <string name="no_navigation_app">Couldn\'t find a navigation app</string>
+
+    <!-- Text for the details tab on the place detail screen -->
+    <string name="details_tab_title">Details</string>
+    <!-- Text for the photos tab on the place detail screen -->
+    <string name="photos_tab_title">Photos</string>
+
+    <string name="empty_photos_text">You don\'t have any photos saved for this place.</string>
+    <!-- Action to take a photo with the device camera -->
+    <string name="add_photo_camera">Take photo with camera</string>
+    <!-- Action to add a photo to the place using a gallery/photos app -->
+    <string name="add_photo_gallery">Add photo from gallery</string>
+
+    <!-- Action to share a photo -->
+    <string name="share_photo">Share photo</string>
+    <!-- Action to delete a photo -->
+    <string name="delete_photo">Delete photo</string>
+    <!-- Message indicated a photo has been deleted -->
+    <string name="photo_deleted_snackbar">Photo deleted</string>
+
+    <!-- Action to save the current screen -->
+    <string name="save">Save</string>
+    <!-- Action to choose the current selection -->
+    <string name="select">Select</string>
+
+    <string name="set_location_and_date_from_photo">This photo has a latitude/longitude and date already set, should those be saved on this place?</string>
+    <string name="set_location_from_photo">This photo has a latitude/longitude already set, should that be saved on this place?</string>
+    <string name="set_date_from_photo">This photo has a date set, should that be saved on this place?</string>
+    <!-- Message indicating that information from the photo has been saved onto the place within the app -->
+    <string name="info_set_from_photo">Info saved from photo</string>
+
+    <!-- Action to add a note or description for a photo -->
+    <string name="photo_notes">Add a note</string>
+
+    <!-- Title used when displaying an address -->
+    <string name="address_title">Address</string>
+    <!-- Title used when displaying an approximate address for latitude/longitude coordinates -->
+    <string name="appx_address_title">Closest Address</string>
+    <!-- Title used when displaying latitude/longitude coordinates -->
+    <string name="coordinates_title">Coordinates</string>
+    <!-- Title used when displaying a latitude coordinate -->
+    <string name="latitude_title">Latitude</string>
+    <!-- Title used when displaying a longitude coordinate -->
+    <string name="longitude_title">Longitude</string>
+    <!-- Address help text -->
+    <string name="address_help_text">When you create a new place without specifying a location, your current location is saved by default. You can edit the location by tapping this card.</string>
+
+    <!-- Message indicating a new place has been created -->
+    <string name="place_created">New place created</string>
+    <!-- Message indicating a place has been deleted -->
+    <string name="place_deleted">Place deleted</string>
+
+    <!-- Title used when displaying the screen that allows the user to choose a folder/directory -->
+    <string name="select_folder_title">Select Folder</string>
+    <!-- Action to navigate up the folder hierarchy to the parent folder -->
+    <string name="navigate_up_folder">Go to parent folder</string>
+    <!-- Action to create a ScoutLog folder inside the current folder -->
+    <string name="create_app_folder">Create ScoutLog folder here</string>
+    <!-- Error message telling the user that something went wrong when trying to create a ScoutLog folder -->
+    <string name="cannot_create_folder">Cannot create ScoutLog folder</string>
+    <!-- Dialog title asking the user whether he wants to move the photos to the new folder -->
+    <string name="move_photos_title">Move photos</string>
+    <!-- Dialog message asking the user whether he wants to move the photos to the new folder -->
+    <string name="move_photos_message">Move your photos from the old folder to the new one?</string>
+    <!-- Message that the photos are currently being moved to the new folder -->
+    <string name="moving_photos_message">Moving photos</string>
+    <!-- Error message that there was a problem moving the photos -->
+    <string name="move_photos_error_title">Error moving photos</string>
+    <!-- Error message that there was a problem moving the photos -->
+    <string name="move_photos_error_message">There was an error moving the photos to the new folder.</string>
+
+    <!-- Message indicating no camera was found on the user's device -->
+    <string name="no_camera_found_title">No camera found</string>
+    <!-- Message indicating no camera was found on the user's device -->
+    <string name="no_camera_found_message">No camera was found for this device.</string>
+    <!-- Error message indicating some error was encountered when opening the camera app -->
+    <string name="camera_file_not_created_title">Camera error</string>
+    <!-- Error message indicating some error was encountered when opening the camera app -->
+    <string name="camera_file_not_created_message">There was an error opening the camera! Please take a photo separately then add it from the gallery.</string>
+    <!-- Message indicating the photo couldn't be loaded from the user's device -->
+    <string name="photo_not_loaded_title">Failed to load image</string>
+    <!-- Message indicating the photo couldn't be loaded from the user's device -->
+    <string name="photo_not_loaded_message">The image could not be loaded.</string>
+    <!-- Message indicating the photo(s) couldn't be loaded from the user's device -->
+    <string name="photos_not_loaded_message">One or more images could not be loaded.</string>
+
+    <!-- Edit note screen title -->
+    <string name="edit_note">Edit Note</string>
+
+    <!-- Menu item to copy the current date and time -->
+    <string name="copy_current_datetime">Copy current date</string>
+    <!-- Menu item to copy the current date to the clipboard -->
+    <string name="copy_date">Copy date</string>
+    <!-- Menu item to copy the current time to the clipboard -->
+    <string name="copy_time">Copy time</string>
+    <!-- Menu item to copy the current date and time to the clipboard -->
+    <string name="copy_datetime">Copy date and time</string>
+    <!-- Message indicating the text was copied to the clipboard -->
+    <string name="copied">Copied</string>
+
+    <!-- Action for searching a place by address -->
+    <string name="map_search">Search address</string>
+    <!-- Error message indicating the address could not be found by the app -->
+    <string name="address_not_found">Address could not be found</string>
+
+    <!-- Message indicating the most accurate device location was found by Android -->
+    <string name="most_accurate_location_set">Most accurate location set</string>
+
+    <!-- Select Tags screen title -->
+    <string name="tags_title">Select Tags</string>
+    <string name="empty_tags_text">You don\'t have any saved tags.</string>
+    <string name="empty_filtered_tags_text">You don\'t have any tags that match your search query.</string>
+    <!-- Action for creating a new tag -->
+    <string name="add_tag">Add Tag</string>
+    <!-- Action for creating a new tag with the given text -->
+    <string name="add_tag_from_search">Add Tag \"%1$s\"</string>
+    <!-- Action for displaying the help notes for the current screen -->
+    <string name="show_help">Show Help</string>
+
+    <!-- Action for renaming a tag -->
+    <string name="edit_tag">Rename</string>
+    <!-- Action for setting the tag's map marker -->
+    <string name="set_map_marker">Set Map Marker</string>
+    <!-- Action for deleting a tag -->
+    <string name="delete_tag">Delete</string>
+
+    <!-- Message for discarding unsaved changes to tag selections for a place -->
+    <string name="notify_unsaved_tags_dialog_title">Discard unsaved changes?</string>
+    <!-- Message for discarding unsaved changes to tag selections for a place -->
+    <string name="notify_unsaved_tags_dialog_message">You have made changes to the selected tags for this place. Do you want to discard them?</string>
+
+    <!-- Dialog title for selecting a tag color -->
+    <string name="dialog_color_picker_title">Select a color</string>
+
+    <!-- Message indicating tag was deleted -->
+    <string name="tag_deleted_snackbar">Tag deleted</string>
+
+    <!-- Dialog title for entering tag name -->
+    <string name="tag_edit_dialog_title">Tag Name</string>
+
+    <!-- Error shown to the user after entering a tag name that already exists in the app -->
+    <string name="duplicate_tag_error">A tag with that name already exists</string>
+
+    <!-- Action for selecting tags -->
+    <string name="select_tags_hint_text">Select tags for the place</string>
+
+    <string name="select_tags_help_screen_1">A place can have multiple tags, and each tag can have its own color.</string>
+    <string name="select_tags_help_screen_2">If it has one, the first tag\'s color becomes the color for that place\'s map pin.</string>
+
+    <!-- Action to indicate the user is ready to move onto the next help screen -->
+    <string name="next">Next</string>
+    <!-- Action to indicate the user is done with the message or prompt -->
+    <string name="got_it">Got it</string>
+    <!-- Action to indicate the user is done with the message or prompt -->
+    <string name="no_thanks">No thanks</string>
+
+    <!-- Bulk Edit Tags screen title -->
+    <string name="bulk_edit_tags_title">Edit Tags</string>
+
+    <string-array name="bulk_tag_options">
+        <!-- Action to indicate the user is adding tags to the selected places -->
+        <item>Add Tags</item>
+        <!-- Action to indicate the user is removing tags from the selected places -->
+        <item>Remove Tags</item>
+    </string-array>
+
+    <!-- Message indicating tags to remove will be displayed in this area -->
+    <string name="remove_tags_hint_text">Tags to remove</string>
+    <!-- Message indicating tags to add will be displayed in this area -->
+    <string name="add_before_tags_hint_text">Tags to add before existing</string>
+    <!-- Message indicating tags to add will be displayed in this area -->
+    <string name="add_after_tags_hint_text">Tags to add after existing</string>
+
+    <!-- Action to add tags before a place's existing tags -->
+    <string name="add_before">Add before</string>
+    <!-- Action to add tags after a place's existing tags -->
+    <string name="add_after">Add after</string>
+
+    <string name="bulk_edit_tags_help_screen_1">Every place you selected can have multiple tags, and they have a specific order.</string>
+    <string name="bulk_edit_tags_help_screen_2">So, you can add tags either before or after the existing tags for every place.</string>
+    <string name="bulk_edit_tags_help_screen_3">You can also remove existing tags by changing the edit mode in the toolbar.</string>
+
+    <!-- Select places (to link together) screen title -->
+    <string name="select_linked_places_title">Select Places</string>
+    <!-- Hint message for a field to filter places in a list by a search query -->
+    <string name="linked_places_filter_text">Filter places</string>
+    <!-- Action for editing/modifying the current linked places -->
+    <string name="linked_places_edit">Edit</string>
+
+    <!-- Option to display the default icon as a map marker for a tag -->
+    <string name="default_marker">Default marker</string>
+    <!-- Option to display a custom icon as a map marker for a tag -->
+    <string name="custom_marker">Custom marker</string>
+    <!-- Message indicating the currently selected marker color is the default -->
+    <string name="default_color">Default</string>
+    <!-- Message indicating the currently selected marker color is custom -->
+    <string name="custom_color">Custom</string>
+    <!-- Message title for the currently selected marker color -->
+    <string name="selected_color">Selected color</string>
+    <!-- Message title for the currently selected marker icon -->
+    <string name="selected_image">Selected image</string>
+    <!-- Error message that explains that the user needs to select an image for the icon -->
+    <string name="missing_selected_image_error">You have selected the custom marker option but haven\'t yet selected an image for the marker.</string>
+    <!-- Error message for when the currently set marker icon cannot be found -->
+    <string name="custom_icon_not_found_error">The selected image cannot be found on the device; it may have been renamed or deleted.</string>
+    <!-- Error message for when the currently set marker icon cannot be found, suggesting to try syncing again -->
+    <string name="custom_icon_not_found_error_sync">If the image has been synced to Google Drive, you can re-download it by syncing again.</string>
+
+    <!-- Dialog title that explains that the user's Google Drive storage is full -->
+    <string name="gdrive_storage_full_title">Drive Storage Full</string>
+    <!-- Dialog message that explains that the user's Google Drive storage is full -->
+    <string name="gdrive_storage_full_message">Your Google Drive storage is full, so ScoutLog can no longer sync its data.\n\nPlease free up space before trying to sync again.</string>
+
+    <!-- Dialog title that explains that there was an error trying to create a photo file -->
+    <string name="photo_file_create_error_title">Cannot create photos</string>
+    <!-- Dialog message that explains that there was an error trying to create a photo file -->
+    <string name="photo_file_create_error_message">Either the following directory does not exist or ScoutLog doesn\'t have permission to create files within it:\n\n%1$s\n\nPlease give ScoutLog permission to create files or change the photo storage folder in the settings.</string>
+
+    <!-- Settings screen title -->
+    <string name="settings_main_title">Settings</string>
+    <!-- Settings screen title -->
+    <string name="settings_display_title">Settings: Display</string>
+    <!-- Settings screen title -->
+    <string name="settings_behavior_title">Settings: Behavior</string>
+    <!-- Settings screen title -->
+    <string name="settings_sync_title">Settings: Sync</string>
+    <!-- Settings screen title -->
+    <string name="settings_integ_title">Settings: Import</string>
+    <!-- Settings screen title -->
+    <string name="settings_advanced_title">Settings: Advanced</string>
+    <!-- Settings screen header -->
+    <string name="settings_advanced_category">Advanced</string>
+
+    <!-- Sync Help screen header -->
+    <string name="sync_help_title">Sync Help</string>
+    <!-- Sync Help header -->
+    <string name="sync_help_header_1">How it works</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_1">Select a Google account, and ScoutLog will create a folder in Drive to store your places, tags and photos. Check the "Sync automatically" option to have ScoutLog periodically sync with Drive.</string>
+    <!-- Sync Help header -->
+    <string name="sync_help_header_2">Troubleshooting</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_2a">If some of your data doesn\'t seem to be syncing between ScoutLog and Google Drive, there could be a problem with the metadata. To maximize efficiency, ScoutLog stores metadata to keep track of what data has changed since the last sync. Use the button below to clear the metadata and perform a full sync.</string>
+    <!-- Action to execute a full sync to Google Drive -->
+    <string name="full_sync_button">Perform full sync</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_2b">If syncing seems to be failing often, you can email me (the developer). The email will contain anonymous information about any recent sync failures which will help me debug and fix any issues.</string>
+    <!-- Action to email me (the developer) to debug the sync issues -->
+    <string name="sync_email_button">Email me to debug the issue</string>
+
+    <!-- Integration Help screen header -->
+    <string name="integ_help_title">Import Help</string>
+    <!-- Integration Help header -->
+    <string name="integ_help_header_1">How it works</string>
+    <!-- Integration Help text -->
+    <string name="integ_help_text_1">Share a file to ScoutLog to import its data. GPX, Google Bookmarks, and photo files are supported. If you have trouble with an import or want to request support for a file format, please email me.</string>
+    <!-- Action to email me (the developer) -->
+    <string name="integ_email_button">Email me</string>
+    <!-- Integration Help header -->
+    <string name="integ_help_header_2">Importing Google Maps stars</string>
+    <!-- Integration Help text -->
+    <string name="integ_help_text_2">To import stars from Google Maps, open %1$s in a browser and click the \"Export bookmarks\" link. The site doesn\'t seem well-designed for mobile so it might be easier to access it from the desktop. It should download a file which you can then share to ScoutLog.</string>
+    <!-- Integration Help header -->
+    <string name="integ_help_header_3">Ignored import data</string>
+    <!-- Integration Help text -->
+    <string name="integ_help_text_3">Some data may be ignored during import. There are several reasons this can happen:\n\n1. There are duplicate entries and the \"Ignore duplicates\" setting is enabled.\n\n2. You have exceeded the limit of places you can import and you haven\'t purchased the unlock version yet.\n\n3. Some data has to be downloaded before importing and there was an error downloading the file.</string>
+
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_display">Display</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_behavior">Behavior</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_sync">Sync to Google Drive</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_integ">Import</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_advanced">Advanced features</string>
+
+    <!-- Option to contact me to help translate the app -->
+    <string name="pref_help_translate_title">Help translate</string>
+    <!-- Option to contact me to help translate the app -->
+    <string name="pref_help_translate_summary">Email me to help translate ScoutLog into other languages!</string>
+
+    <!-- Message to rate and review the app on the Play Store -->
+    <string name="review_app_message">Enjoying ScoutLog? Please rate it on the Play Store!</string>
+    <!-- Action to open the Play Store page to rate/review the app -->
+    <string name="review_app_action">Rate</string>
+
+    <!-- Option to select distance units (kilometers vs miles) -->
+    <string name="pref_measurement">Distance units</string>
+    <string-array name="pref_measurement_value_arr" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_measurement_display_arr">
+        <!-- Distance units option (meters, kilometers) -->
+        <item>Metric system (m, km)</item>
+        <!-- Distance units option (feet, miles) -->
+        <item>U.S. system (ft, mi)</item>
+    </string-array>
+
+    <!-- Option to select theme (light or dark) -->
+    <string name="pref_theme">Theme</string>
+    <string-array name="pref_theme_value_arr" translatable="false">>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_theme_display_arr">
+        <!-- Theme option -->
+        <item>Light</item>
+        <!-- Theme option -->
+        <item>Dark</item>
+    </string-array>
+
+    <!-- Option to select the default pin color for the map -->
+    <string name="pref_map_marker_color">Default map pin color</string>
+    <!-- Action to use the original default pin color for the map -->
+    <string name="use_default">Use default</string>
+
+    <!-- Option to automatically keep the map centered on the device's latitude/longitude coordinates -->
+    <string name="pref_sticky_current_location_title">Track your location</string>
+    <!-- Option to automatically keep the map centered on the device's latitude/longitude coordinates -->
+    <string name="pref_sticky_current_location_summary">If enabled, the map will stay centered on your device\'s location, even when you move</string>
+
+    <!-- Option to select the folder location where photos are stored on the device -->
+    <string name="pref_photos_location_title">Photo storage folder</string>
+
+    <!-- Option to display "discard unsaved changes" warning dialog -->
+    <string name="pref_notify_unsaved_changes_title">Unsaved changes warning</string>
+    <!-- Option to display "discard unsaved changes" warning dialog -->
+    <string name="pref_notify_unsaved_changes_summary">Show a warning message before discarding unsaved changes</string>
+
+    <!-- Option to display closest address for latitude/longitude coordinates -->
+    <string name="pref_show_closest_address_title">Show closest address</string>
+    <!-- Option to display closest address for latitude/longitude coordinates -->
+    <string name="pref_show_closest_address_summary">When a place only has latitude/longitude coordinates, show the closest address instead</string>
+
+    <!-- Option to display photos is the places list display view -->
+    <string name="pref_list_view_photos">Show photos in list view</string>
+
+    <!-- Option to display map marker next to each place on the places list -->
+    <string name="pref_show_map_markers_title">Show map markers in places list</string>
+    <!-- Option to display map marker next to each place on the places list -->
+    <string name="pref_show_map_markers_summary">If a place\'s first tag has a map marker, show it in the list and grid</string>
+
+    <!-- Option to select the number of pins that are shown together on the map without being grouped (when pins are grouped, it just shows a circle with a number telling how many pins are in that area of the map) -->
+    <string name="pref_cluster_threshold_title">Pin grouping threshold</string>
+    <!-- Option to select the number of pins that are shown together on the map without being grouped (when pins are grouped, it just shows a circle with a number telling how many pins are in that area of the map) -->
+    <string name="pref_cluster_threshold_summary">Number of pins that are shown together on the map without being grouped\n\n%1$s</string>
+    <string-array name="pref_cluster_threshold_value_arr" translatable="false">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_cluster_threshold_display_arr">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <!-- Option to never group pins together into a cluster -->
+        <item>Never group pins</item>
+    </string-array>
+
+    <!-- Option to select Google account for syncing to Drive -->
+    <string name="pref_account_title">Account</string>
+    <!-- Option to select Google account for syncing to Drive -->
+    <string name="pref_account_summary">Sign in to a Google account</string>
+
+    <!-- Option to let the app automatically sync data to Google Drive -->
+    <string name="pref_auto_sync_title">Sync automatically</string>
+    <!-- Option to let the app automatically sync data to Google Drive -->
+    <string name="pref_auto_sync_summary">Sync periodically with Google Drive to keep your device up-to-date</string>
+    <!-- Dialog title asking the user to enable Android auto-sync for a Google account -->
+    <string name="auto_sync_dialog_title">Turn auto-sync on?</string>
+    <!-- Dialog message asking the user to enable Android auto-sync for a Google account -->
+    <string name="auto_sync_dialog_message">System-wide auto-sync needs to be enabled, which means changes you make to all apps and accounts, not just ScoutLog, will be synchronized.</string>
+    <!-- Action to enable Android auto-sync for a Google account -->
+    <string name="turn_on_auto_sync">Turn on</string>
+
+    <!-- Action to sync data to Google Drive right now -->
+    <string name="pref_sync_now_title">Sync now</string>
+    <!-- Message indicating the last date & time the app synced data to Google Drive -->
+    <string name="pref_sync_now_summary">Last synced: %1$s</string>
+    <!-- Error message indicating the app encountered an error when trying to sync data to Google Drive -->
+    <string name="pref_sync_now_summary_error">There was a problem with syncing, please try again later</string>
+    <!-- Error message indicating the app encountered an error when trying to connect to Google -->
+    <string name="pref_sync_now_summary_google_error">There was a problem connecting to Google, please try again later</string>
+
+    <!-- Option for how to store photos -->
+    <string name="pref_photo_storage_title">Photo storage</string>
+    <string-array name="pref_photo_storage_value_arr" translatable="false">>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <!-- Option for how to store photos: Either all photos will be saved to the device or no photos created through the app will be saved to the device after they are synced -->
+    <string-array name="pref_photo_storage_display_arr">
+        <item>Download photos to the device\'s gallery, so they can be accessed while offline</item>
+        <item>Only keep photos in the cloud, to save storage space</item>
+    </string-array>
+
+    <!-- Option for skipping over duplicates during import (duplicate is defined as any place with the same latitude/longitude coordinates as an existing place) -->
+    <string name="pref_ignore_imported_duplicates_title">Ignore duplicates</string>
+    <!-- Option for skipping over duplicates during import (duplicate is defined as any place with the same latitude/longitude coordinates as an existing place) -->
+    <string name="pref_ignore_imported_duplicates_summary">Imported entries whose coordinates already match existing places are ignored</string>
+
+    <!-- Option for deciding how multiple photos should be organized when imported -->
+    <string name="pref_import_multiple_photos_title">Organize multiple photos</string>
+    <string-array name="pref_import_multiple_photos_value_arr" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <!-- Option for deciding how multiple photos should be organized when imported -->
+    <string-array name="pref_import_multiple_photos_display_arr">
+        <item>Create a new place for each imported photo</item>
+        <item>Create 1 new place for all imported photos</item>
+        <item>Group imported photos by similar GPS coordinates, create a new place for each group</item>
+    </string-array>
+
+    <!-- Message indicating that the app is currently loading files from the device -->
+    <string name="import_loading_files">Loading files…</string>
+
+    <!-- Message indicating ScoutLog is trying to import a single place -->
+    <string name="importing_place">Importing place…</string>
+    <!-- Error message indicating data that was imported to ScoutLog wasn't recognized -->
+    <string name="import_data_not_recognized">Data shared with ScoutLog wasn\'t recognized</string>
+    <!-- Error message indicating data that was imported to ScoutLog wasn't recognized -->
+    <string name="import_failed">Failed to import the data</string>
+
+    <!-- Dialog title warning the user that he can only import up to 15 places -->
+    <string name="import_warning_title">Import warning</string>
+    <!-- Dialog message warning the user that he can only import up to 15 places -->
+    <string name="import_warning_message">You can only import or create up to 15 places in the free version of this app. After that, you must purchase the unlock version.\n\nContinue with the import?</string>
+
+    <!-- Notification here refers to an Android notification that's displayed during the import process -->
+    <string name="import_started">Import started, see notification for details</string>
+    <!-- Notification title indicating the app is currently in the process of saving places from a file -->
+    <string name="import_notification_title">Import places</string>
+    <!-- Notification message indicating the app is currently in the process of saving places from a file -->
+    <string name="import_notification_message">Importing places from the file</string>
+    <!-- Notification title indicating the app is currently in the process of importing photos -->
+    <string name="import_photos_notification_title">Import photos</string>
+    <!-- Notification message indicating the app is currently in the process of importing photos. Example: "Importing 2 photos" -->
+    <plurals name="import_photos_notification_message">
+        <item quantity="one">Importing %1$d photo</item>
+        <item quantity="other">Importing %1$d photos</item>
+    </plurals>
+    <!-- Notification title indicating the app has completed the process of saving places from a file -->
+    <string name="import_complete_notification_title">Import completed</string>
+    <!-- Notification message indicating how many places were imported into ScoutLog. Example: "2 places imported" -->
+    <plurals name="import_complete_notification_message_imported">
+        <item quantity="one">%1$d place imported</item>
+        <item quantity="other">%1$d places imported</item>
+    </plurals>
+    <!-- Notification message indicating how many places were ignored from being imported. Example: "2 places ignored" -->
+    <plurals name="import_complete_notification_message_ignored">
+        <item quantity="one">%1$d place ignored</item>
+        <item quantity="other">%1$d places ignored</item>
+    </plurals>
+    <!-- Notification title indicating the app has encountered an error during the import process -->
+    <string name="import_failed_title">Import error</string>
+    <!-- Notification message indicating the app has encountered an error during the import process -->
+    <string name="import_failed_message">Touch to email me for help.</string>
+    <!-- Notification message indicating how many photos were imported into ScoutLog. Example: "2 photos imported" -->
+    <plurals name="import_photos_complete_notification_message_imported">
+        <item quantity="one">%1$d photo imported</item>
+        <item quantity="other">%1$d photos imported</item>
+    </plurals>
+    <!-- Notification message indicating how many photos were ignored from being imported. Example: "2 photos ignored" -->
+    <plurals name="import_photos_complete_notification_message_ignored">
+        <item quantity="one">%1$d photo ignored</item>
+        <item quantity="other">%1$d photos ignored</item>
+    </plurals>
+
+    <!-- Option to enable dates for places  -->
+    <string name="pref_enable_dates_title">Enable dates</string>
+    <!-- Option to enable dates for places -->
+    <string name="pref_enable_dates_summary">Allows you to save a date for a place</string>
+    <!-- Option to enable advanced feature where places can be directly linked to each other -->
+    <string name="pref_enable_linked_places_title">Enable place linking</string>
+    <!-- Option to enable advanced feature where places can be directly linked to each other -->
+    <string name="pref_enable_linked_places_summary">Allows you to link multiple places together through a new card on the detail screen</string>
+
+    <!-- Option to allow the app to send anonymous data to Google Analytics -->
+    <string name="pref_reporting_title">Improve ScoutLog</string>
+    <!-- Option to allow the app to send anonymous data to Google Analytics -->
+    <string name="pref_reporting_summary">Help improve ScoutLog by sending anonymous usage data</string>
+
+    <!-- Option to unlock the app's free trial with a purchase -->
+    <string name="pref_unlock_title">Unlock ScoutLog</string>
+    <!-- Option to unlock the app's free trial with a purchase -->
+    <string name="pref_unlock_summary">Purchase the unlock version for full access to ScoutLog</string>
+
+    <!-- Action to open the About screen -->
+    <string name="pref_about_title">About</string>
+
+    <!-- About screen title -->
+    <string name="about_title">About</string>
+    <!-- v is short for "version"; for example: v1.3 -->
+    <string name="about_version">v%1$s</string>
+    <!-- Message indicating who created the app's icon -->
+    <string name="about_credit">App icon by %1$s</string>
+    <string name="about_concerns">Questions, comments, concerns?</string>
+    <!-- Action to open an email app to email the developer -->
+    <string name="about_email">Email me!</string>
+    <!-- Action to view the licenses for open source projects used in this app -->
+    <string name="about_licenses">Open source licenses</string>
+
+    <!-- Action to open an email app to email the developer -->
+    <string name="send_email">Send email</string>
+    <!-- Error message indicating there are no email apps installed on the device -->
+    <string name="no_email_apps">There are no email applications installed.</string>
+
+    <!-- Unlock dialog title -->
+    <string name="unlock_app_title">Unlock more features</string>
+    <!-- Unlock dialog message indicating user is using a limited free trial -->
+    <string name="unlock_app_places_10_message">You can only create a limited number of places in the free version of this app.\n\nTo get full access to all features, please purchase the unlock version.</string>
+    <!-- Unlock dialog message indicating user is using a limited free trial -->
+    <string name="unlock_app_places_15_message">You have created the maximum number of places in the free version of this app!\n\nTo get full access to all features, please purchase the unlock version.</string>
+    <!-- Action to purchase the unlocked version of this app -->
+    <string name="unlock_app_yes">Unlock app</string>
+    <!-- Action to extend the trial by allowing the user to create 5 more places -->
+    <string name="unlock_app_extension">Give me 5 more</string>
+    <!-- Action to close the unlock dialog -->
+    <string name="unlock_app_no">Cancel</string>
+
+    <!-- (Chrome extension only) App description -->
+    <string name="app_desc">Create and manage important locations, as well as sync them with your mobile devices using the ScoutLog Android app.</string>
+
+    <!-- (Chrome extension only) Error message displayed to the user -->
+    <string name="error_unknown">ScoutLog encountered an error while trying to sync.</string>
+    
+    <!-- (Chrome extension only) Error message displayed to the user -->
+    <string name="error_401">ScoutLog needs permission to access Google Drive to function properly.</string>
+    
+    <!-- (Chrome extension only) Error message displayed to the user -->
+    <string name="error_unknown">ScoutLog encountered an error while trying to sync.</string>
+    
+    <!-- (Chrome extension only) Error message displayed to the user -->
+    <string name="error_place_not_found">This place could not be found; it may have been deleted.</string>
+    
+    <!-- (Chrome extension only) Message displayed to the user -->
+    <string name="long_wait_message">It may take a few minutes to sync...</string>
+
+    <!-- (Chrome extension only) Action to upload selected files -->
+    <string name="upload">Upload</string>
+
+    <!-- (Chrome extension only) Action to browse files to select -->
+    <string name="browse">Browse</string>
+    
+    <!-- (Chrome extension only) Action to retry the same action -->
+    <string name="try_again">Try again</string>
+
+</resources>

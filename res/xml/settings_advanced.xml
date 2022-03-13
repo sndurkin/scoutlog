@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="pref_enable_dates"
+        android:title="@string/pref_enable_dates_title"
+        android:summary="@string/pref_enable_dates_summary"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="pref_enable_linked_locations"
+        android:title="@string/pref_enable_linked_places_title"
+        android:summary="@string/pref_enable_linked_places_summary"
+        android:defaultValue="false" />
+
+</PreferenceScreen>

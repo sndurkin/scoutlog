@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_linked_locations_card"
+    android:visibility="gone"
+    style="?attr/cardView">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/imageLink" />
+
+    <TextView
+        android:id="@+id/detail_linked_location_empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:minHeight="32dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:hint="@string/linked_place"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/detail_linked_locations_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="48dp"
+        android:paddingTop="8dp"
+        android:visibility="gone" />
+
+</android.support.v7.widget.CardView>

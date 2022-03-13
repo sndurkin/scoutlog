@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="0dp"
+    style="?attr/cardView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sndurkin.locationscout.DetailPhotoImageButton
+            android:id="@+id/detail_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            style="@android:style/Widget.Holo.Button.Borderless" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shadow_down">
+
+            <ImageButton
+                android:id="@+id/detail_photo_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/share_dark"
+                android:contentDescription="@string/share_photo"
+                style="@android:style/Widget.Holo.Button.Borderless" />
+
+            <ImageButton
+                android:id="@+id/detail_photo_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/delete_dark"
+                android:contentDescription="@string/delete_photo"
+                style="@android:style/Widget.Holo.Button.Borderless" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/set_info_from_photo_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/detail_photo"
+            android:visibility="gone"
+            android:background="@color/card_inline_alert_message_background">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/shadow_down" />
+
+            <TextView
+                android:id="@+id/set_info_from_photo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/set_info_from_photo_no_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginRight="12dp"
+                    android:text="@android:string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    style="@android:style/Widget.Holo.Button.Borderless" />
+
+                <Button
+                    android:id="@+id/set_info_from_photo_yes_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginRight="12dp"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    style="@android:style/Widget.Holo.Button.Borderless" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/shadow_up" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_photo_date_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/set_info_from_photo_message"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/imageTime" />
+
+            <TextView
+                android:id="@+id/detail_photo_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="32dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:background="@android:color/transparent" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/detail_photo_date_ct"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="?attr/cardSeparatorBackgroundColor" />
+
+        <LinearLayout
+            android:id="@+id/detail_photo_notes_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/imageNotes" />
+
+            <TextView
+                android:id="@+id/detail_photo_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="32dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:hint="@string/photo_notes"
+                android:background="@android:color/transparent"
+                android:textIsSelectable="true"
+                android:linksClickable="true"
+                android:autoLink="all" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_photo_notes_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_photo_notes_ct"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/card_divider" />
+
+            <include layout="@layout/card_edit_toolbar" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

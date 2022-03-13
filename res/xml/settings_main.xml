@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen
+        android:key="pref_category_display"
+        android:title="@string/pref_category_display"
+        android:persistent="false"
+        android:fragment="com.sndurkin.locationscout.settings.DisplaySettingsFragment" />
+
+    <PreferenceScreen
+        android:key="pref_category_behavior"
+        android:title="@string/pref_category_behavior"
+        android:persistent="false"
+        android:fragment="com.sndurkin.locationscout.settings.BehaviorSettingsFragment" />
+
+    <PreferenceScreen
+        android:key="pref_category_sync"
+        android:title="@string/pref_category_sync"
+        android:persistent="false"
+        android:fragment="com.sndurkin.locationscout.settings.SyncSettingsFragment" />
+
+    <PreferenceScreen
+        android:key="pref_category_integ"
+        android:title="@string/pref_category_integ"
+        android:persistent="false"
+        android:fragment="com.sndurkin.locationscout.settings.IntegSettingsFragment" />
+
+    <PreferenceScreen
+        android:key="pref_category_advanced"
+        android:title="@string/pref_category_advanced"
+        android:persistent="false"
+        android:fragment="com.sndurkin.locationscout.settings.AdvancedSettingsFragment" />
+
+    <Preference
+        android:key="pref_unlock"
+        android:title="@string/pref_unlock_title"
+        android:summary="@string/pref_unlock_summary" />
+
+    <Preference
+        android:key="pref_help_translate"
+        android:title="@string/pref_help_translate_title"
+        android:summary="@string/pref_help_translate_summary" />
+
+    <Preference
+        android:key="pref_about"
+        android:title="@string/pref_about_title" />
+
+</PreferenceScreen>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_tags_card"
+    style="?attr/cardView">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/imageTags" />
+
+    <TextView
+        android:id="@+id/detail_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:layout_marginLeft="48dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:hint="@string/tags" />
+
+</android.support.v7.widget.CardView>

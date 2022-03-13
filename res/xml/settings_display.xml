@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.sndurkin.locationscout.settings.AppCompatListPreference
+        android:key="pref_theme"
+        android:title="@string/pref_theme"
+        android:entries="@array/pref_theme_display_arr"
+        android:entryValues="@array/pref_theme_value_arr"
+        android:defaultValue="0" />
+
+    <com.sndurkin.locationscout.settings.AppCompatListPreference
+        android:key="pref_measurement"
+        android:title="@string/pref_measurement"
+        android:entries="@array/pref_measurement_display_arr"
+        android:entryValues="@array/pref_measurement_value_arr"
+        android:defaultValue="0" />
+
+    <com.sndurkin.locationscout.settings.ColorPickerPreference
+        android:key="pref_map_marker_color"
+        android:title="@string/pref_map_marker_color" />
+
+    <CheckBoxPreference
+        android:key="pref_show_closest_address"
+        android:title="@string/pref_show_closest_address_title"
+        android:summary="@string/pref_show_closest_address_summary"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="pref_list_view_photos"
+        android:title="@string/pref_list_view_photos"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="pref_show_colors"
+        android:title="@string/pref_show_map_markers_title"
+        android:summary="@string/pref_show_map_markers_summary"
+        android:defaultValue="true" />
+
+</PreferenceScreen>

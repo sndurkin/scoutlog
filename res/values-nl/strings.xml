@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="app_name">ScoutLog</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="always">Altijd</string>
+    <!-- Used in the navigation drawer -->
+    <string name="places">Plaatsen</string>
+    <!-- Used in the navigation drawer -->
+    <string name="browse_by_tags">Zoeken op labels</string>
+    <!-- Used in the navigation drawer -->
+    <string name="search">Zoeken</string>
+    <!-- Used in the navigation drawer -->
+    <string name="display_mode">Weergave modus:</string>
+    <!-- Used in the navigation drawer -->
+    <string name="open_drawer">Open navigatie menu</string>
+    <!-- Used in the navigation drawer -->
+    <string name="close_drawer">Sluit navigatie menu</string>
+    <!-- Main screen title -->
+    <string name="places_title">Plaatsen</string>
+    <!-- Menu item for deleting selected places -->
+    <string name="menu_delete_places">Verwijderen</string>
+    <!-- Menu item for selecting all places -->
+    <string name="menu_select_all">Alles selecteren</string>
+    <!-- Menu item for editing tags for all selected places -->
+    <string name="menu_edit_tags">Labels aanpassen</string>
+    <!-- Menu item for exporting all selected places -->
+    <string name="menu_export">Exporteren als zip bestand</string>
+    <!-- Message for verifying whether the user wants to export the selected places to a zip file. Example: "Export these 2 places to a zip file?" -->
+    <plurals name="export_places_message">
+        <item quantity="one">Deze plaats exporteren als zip bestand?</item>
+        <item quantity="other">Deze %1$d plaatsen/locaties exporteren als zip bestand?</item>
+    </plurals>
+    <!-- Notification title indicating the app is currently in the process of saving places to a file -->
+    <string name="export_notification_title">Plaatsen exporteren</string>
+    <!-- Notification title indicating the app has encountered an error during the export process -->
+    <string name="export_failed_title">Fout bij exporteren</string>
+    <!-- Notification message indicating the app has encountered an error during the export process -->
+    <string name="export_failed_message">Er is een fout opgetreden bij het maken van het zip  bestand</string>
+    <string name="export_share_intent_title">Zip bestand delen</string>
+    <!-- Action to open a menu with sorting options -->
+    <string name="menu_sort">Sorteren</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_alpha">A - Z</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_reverse_alpha">Z - A</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_newest">Nieuwste</string>
+    <!-- Sorting option -->
+    <string name="menu_sort_oldest">Oudste</string>
+    <!-- Sorting option for tags -->
+    <string name="menu_sort_most_places">Meest gelabelde plaatsen</string>
+    <!-- Sorting option for tags -->
+    <string name="menu_sort_fewest_places">Minst gelabelde plaatsen</string>
+    <!-- Indicates that a place has no title -->
+    <string name="untitled">(Naamloos)</string>
+    <string name="empty_places_text">Je hebt geen opgeslagen plaatsen</string>
+    <string name="empty_places_search_text">Er zijn geen plaatsen gevonden op basis van de zoekterm</string>
+    <!-- Action to create a new place -->
+    <string name="add_place">Nieuwe plaats toevoegen</string>
+    <string name="no_google_play_services_title">Google Play Services niet gevonden</string>
+    <string name="no_google_play_services_message">Kan de Google Play service app niet vinden</string>
+    <string name="account_not_found_title">Kan geen Google Account vinden</string>
+    <string name="account_not_found_message">Je Google Drive account is niet gevonden, het synchroniseren zal worden afgebroken</string>
+    <!-- Dialog title to warn user to set up syncing to Google Drive -->
+    <string name="sync_warning_dialog_title">Synchronisatie instellen</string>
+    <!-- Dialog message to warn user to set up syncing to Google Drive -->
+    <string name="sync_warning_dialog_message">Je hebt meer dan 15 plaatsen toegevoegd aan ScoutLog! \n\nWe bevelen je aan synchronisatie in te stellen zodat je data veilig opgeslagen is in de Cloud.</string>
+    <!-- Action to dismiss dialog -->
+    <string name="dismiss">Negeren</string>
+    <!-- Dialog action to open sync settings screen -->
+    <string name="open_sync_settings">Open synchronisatie instellingen</string>
+    <!-- Action for undoing something a user has done, like deleting a place -->
+    <string name="undo">Ongedaan maken</string>
+    <!-- Message for indicating that the selected places were deleted. Example: "2 places deleted" -->
+    <plurals name="places_deleted_snackbar">
+        <item quantity="one">%1$d plaats verwijderd</item>
+        <item quantity="other">%1$d plaatsen verwijderd</item>
+    </plurals>
+    <!-- VERY rare message displayed to the user when selecting something in the navigation drawer fails -->
+    <string name="nav_action_failed">Navigatie actie is mislukt</string>
+    <!-- Action that allows a user to create a new place where the pin is located on the map -->
+    <string name="new_place_desc">%1$s\n\nKlik om hier een nieuwe plaats te maken</string>
+    <!-- The app is trying to get the device's latitude/longitude coordinates -->
+    <string name="waiting_for_location">Wachten op locatie…</string>
+    <!-- The app failed to get the device's latitude/longitude coordinates -->
+    <string name="location_request_failed">Locatie ophalen mislukt</string>
+    <!-- The app could not resolve the address of the latitude/longitude coordinates -->
+    <string name="address_unavailable">(Adres momenteel niet beschikbaar)</string>
+    <!-- The app could not get the device's latitude/longitude coordinates when the user creates a new place, so there is no physical geolocation saved yet -->
+    <string name="no_location_set">(Geen locatie ingesteld)</string>
+    <!-- The app could not get the device's latitude/longitude coordinates when the user creates a new place, so there is no physical geolocation saved yet -->
+    <string name="no_location_set_toast">Geen locatie ingesteld</string>
+    <!-- Action to copy the latitude/longitude coordinates of the current place to the clipboard -->
+    <string name="copy_coordinates">Kopieer coördinaten</string>
+    <!-- Action to copy the address text of the current place to the clipboard -->
+    <string name="copy_address">Kopieer adres</string>
+    <!-- Message indicating that the latitude/longitude coordinates of the current place were copied to the clipboard -->
+    <string name="copied_coordinates">Coördinaten gekopieerd</string>
+    <!-- Message indicating that the address text of the current place was copied to the clipboard -->
+    <string name="copied_address">Adres gekopieerd</string>
+    <!-- Button description - the button switches between the normal map type and the satellite map type (which looks similar to Google Earth) -->
+    <string name="map_toggle_terrain_desc">Schakelen tussen normale en satelliet kaarttype</string>
+    <!-- Android's location services are disabled and must be enabled by the user to fetch the device's latitude/longitude coordinates -->
+    <string name="location_services_disabled_title">Locatie voorzieningen uitgeschakeld</string>
+    <!-- Android's location services are disabled and must be enabled by the user to fetch the device's latitude/longitude coordinates -->
+    <string name="location_services_disabled_message">Locatie voorzieningen moeten zijn ingeschakeld om je locatie op te kunnen halen</string>
+    <!-- Action on a popup dialog -->
+    <string name="ignore">Negeren</string>
+    <!-- Action to open Android's settings -->
+    <string name="settings">"Instellingen "</string>
+    <string name="improve_location_accuracy_title">Nauwkeurigheid van je locatie verbeteren</string>
+    <string name="improve_location_accuracy_gps_message">Je kunt de nauwkeurigheid van de locatie van je apparaat verbeteren door het inschakelen van GPS.</string>
+    <string name="improve_location_accuracy_wifi_message">Je kunt de nauwkeurigheid van de locatie van je apparaat verbeteren door het inschakelen van WiFi.</string>
+    <string name="sticky_current_location_help_screen_1">Je hebt de \"Volg uw locatie\" modus ingeschakeld!\n\nIn deze modus zal, wanneer je klikt op de huidige locatie knop, de kaart gecentreerd blijven op je locatie.</string>
+    <string name="sticky_current_location_help_screen_2">Je kunt dit uitschakelen door weer op de huidige locatie knop te klikken, of door de kaart te verplaatsen door te swipen.</string>
+    <string name="sticky_current_location_help_screen_3">Let op: deze functie kost extra energie en zal je batterij leeg trekken wanneer het lange tijd is ingeschakeld.</string>
+    <!-- Message title to suggest that the user switch to the list display for places (instead of a grid) -->
+    <string name="switch_display_mode_suggestion_title">Schakelen naar een lijstweergave</string>
+    <!-- Message to suggest that the user switch to the list display for places (instead of a grid) -->
+    <string name="switch_display_mode_suggestion_message">Je voegt geen of weinig foto\'s toe aan je plaatsen. Je zou misschien beter kunnen overschakelen naar een lijstweergave.</string>
+    <!-- Browse by Tags screen title -->
+    <string name="browse_by_tags_title">Zoeken op label</string>
+    <!-- Message for indicating that how many places are tagged with this tag. Example: "2 places" -->
+    <plurals name="num_places_tagged_text">
+        <item quantity="one">%1$d plaats</item>
+        <item quantity="other">%1$d plaatsen</item>
+    </plurals>
+    <!-- Indicates a collection of places that have no assigned tags -->
+    <string name="untagged_places">(Ongelabeld)</string>
+    <!-- Indicates a collection of places that have no assigned tags -->
+    <string name="untagged_places_title">Plaatsen zonder label</string>
+    <!-- Action to create a new place -->
+    <string name="new_place">Nieuwe plaats</string>
+    <!-- Describes the title for the place -->
+    <string name="title">Naam</string>
+    <!-- Action for setting the title for the place -->
+    <string name="set_title">Kies naam</string>
+    <!-- Action for modifying the title for the place -->
+    <string name="edit_title">Naam aanpassen</string>
+    <!-- Action for adding tags to the place -->
+    <string name="tags">Labels toevoegen</string>
+    <!-- Action for adding a note or description to the place -->
+    <string name="notes">Notitie toevoegen</string>
+    <!-- Action for linking a place to the current one -->
+    <string name="linked_place">Linken aan een andere plaats</string>
+    <!-- Action for opening a date picker -->
+    <string name="pick_date">Kies een datum voor deze plaats</string>
+    <!-- Action to share the current place or photo -->
+    <string name="share_place">Delen</string>
+    <!-- Indicates the current photo has been shared -->
+    <string name="share_text">Gedeeld via de ScoutLog app</string>
+    <!-- Indicates the photo file does not exist on the device, so it cannot be shared -->
+    <string name="no_photo_for_sharing">Geen foto beschikbaar om te delen</string>
+    <!-- Action to delete the current place -->
+    <string name="delete_place">Verwijderen</string>
+    <!-- Action to navigate to the current latitude/longitude coordinates using some navigation app (like Google Maps) -->
+    <string name="navigate">Navigeren</string>
+    <!-- Indicates that a navigation app (like Google Maps) was not found on the device -->
+    <string name="no_navigation_app">Kan geen navigatie app vinden</string>
+    <!-- Text for the details tab on the place detail screen -->
+    <string name="details_tab_title">Details</string>
+    <!-- Text for the photos tab on the place detail screen -->
+    <string name="photos_tab_title">"Foto's "</string>
+    <string name="empty_photos_text">Je hebt geen foto\'s opgeslagen voor deze plaats.</string>
+    <!-- Action to take a photo with the device camera -->
+    <string name="add_photo_camera">Foto maken met camera</string>
+    <!-- Action to add a photo to the place using a gallery/photos app -->
+    <string name="add_photo_gallery">Foto kiezen uit galerij</string>
+    <!-- Action to share a photo -->
+    <string name="share_photo">"Foto delen "</string>
+    <!-- Action to delete a photo -->
+    <string name="delete_photo">Foto verwijderen</string>
+    <!-- Message indicated a photo has been deleted -->
+    <string name="photo_deleted_snackbar">Foto is verwijderd</string>
+    <!-- Action to save the current screen -->
+    <string name="save">Opslaan</string>
+    <string name="set_location_and_date_from_photo">De foto heeft al een datum en locatie, moeten deze worden opgeslagen bij deze plaats?</string>
+    <string name="set_location_from_photo">De foto heeft al een locatie, moet deze worden opgeslagen bij deze plaats?</string>
+    <string name="set_date_from_photo">De foto heeft al een datum, moet deze worden opgeslagen bij deze plaats?</string>
+    <!-- Message indicating that information from the photo has been saved onto the place within the app -->
+    <string name="info_set_from_photo">Informatie van foto is opgeslagen</string>
+    <!-- Action to add a note or description for a photo -->
+    <string name="photo_notes">Voeg een notitie toe</string>
+    <!-- Title used when displaying an address -->
+    <string name="address_title">Adres</string>
+    <!-- Title used when displaying an approximate address for latitude/longitude coordinates -->
+    <string name="appx_address_title">Dichtstbijzijnde adres</string>
+    <!-- Title used when displaying latitude/longitude coordinates -->
+    <string name="coordinates_title">Coördinaten</string>
+    <!-- Message indicating a new place has been created -->
+    <string name="place_created">Nieuwe plaats is aangemaakt</string>
+    <!-- Message indicating a place has been deleted -->
+    <string name="place_deleted">Plaats is verwijderd</string>
+    <!-- Message indicating no camera was found on the user's device -->
+    <string name="no_camera_found_title">Geen camera gevonden</string>
+    <!-- Message indicating no camera was found on the user's device -->
+    <string name="no_camera_found_message">Geen camera gevonden op dit apparaat</string>
+    <!-- Error message indicating some error was encountered when opening the camera app -->
+    <string name="camera_file_not_created_title">Camera fout</string>
+    <!-- Error message indicating some error was encountered when opening the camera app -->
+    <string name="camera_file_not_created_message">"Er is een fout opgetreden bij het openen van de camera! Neem met de standaard camera app een foto en voeg deze toe vanuit de galerij. "</string>
+    <!-- Edit note screen title -->
+    <string name="edit_note">Notitie bewerken</string>
+    <!-- Action for searching a place by address -->
+    <string name="map_search">Adres zoeken</string>
+    <!-- Error message indicating the address could not be found by the app -->
+    <string name="address_not_found">Adres kon niet gevonden worden</string>
+    <!-- Message indicating the most accurate device location was found by Android -->
+    <string name="most_accurate_location_set">Meest nauwkeurige locatie ingesteld</string>
+    <!-- Select Tags screen title -->
+    <string name="tags_title">Selecteer labels</string>
+    <string name="empty_tags_text">Je hebt geen opgeslagen labels.</string>
+    <string name="empty_filtered_tags_text">Je hebt geen labels die overeenkomen met je zoekopdracht.</string>
+    <!-- Action for creating a new tag -->
+    <string name="add_tag">Label toevoegen</string>
+    <!-- Action for creating a new tag with the given text -->
+    <string name="add_tag_from_search">Voeg label \"%1$s\" toe</string>
+    <!-- Action for displaying the help notes for the current screen -->
+    <string name="show_help">Hulp weergeven</string>
+    <!-- Action for renaming a tag -->
+    <string name="edit_tag">Hernoemen</string>
+    <!-- Action for deleting a tag -->
+    <string name="delete_tag">Verwijderen</string>
+    <!-- Message for discarding unsaved changes to tag selections for a place -->
+    <string name="notify_unsaved_tags_dialog_title">"Niet opgeslagen aanpassingen weggooien? "</string>
+    <!-- Message for discarding unsaved changes to tag selections for a place -->
+    <string name="notify_unsaved_tags_dialog_message">Je hebt veranderingen aangebracht in de geselecteerde labels voor deze plaats. Wil je deze weggooien?</string>
+    <!-- Dialog title for selecting a tag color -->
+    <string name="dialog_color_picker_title">Selecteer een kleur</string>
+    <!-- Message indicating tag was deleted -->
+    <string name="tag_deleted_snackbar">Label is verwijderd</string>
+    <!-- Dialog title for entering tag name -->
+    <string name="tag_edit_dialog_title">Labelnaam</string>
+    <string name="duplicate_tag_error">Een label met deze naam bestaat al</string>
+    <!-- Action for selecting tags -->
+    <string name="select_tags_hint_text">Selecteer labels voor de plaats</string>
+    <string name="select_tags_help_screen_1">Een plaats kan meerdere labels hebben, en elk label kan een andere kleur hebben.</string>
+    <string name="select_tags_help_screen_2">Als een plaats een label heeft wordt de kleur van de eerste de kleur van de pin van die plaats.</string>
+    <!-- Action to indicate the user is ready to move onto the next help screen -->
+    <string name="next">Volgende</string>
+    <!-- Action to indicate the user is done with the message or prompt -->
+    <string name="got_it">Ik begrijp het</string>
+    <!-- Action to indicate the user is done with the message or prompt -->
+    <string name="no_thanks">Nee bedankt</string>
+    <!-- Bulk Edit Tags screen title -->
+    <string name="bulk_edit_tags_title">Labels aanpassen</string>
+    <string-array name="bulk_tag_options">
+    <!-- Action to indicate the user is adding tags to the selected places -->
+        <item>Labels toevoegen</item>
+    <!-- Action to indicate the user is removing tags from the selected places -->
+        <item>Labels verwijderen</item>
+    </string-array>
+    <!-- Message indicating tags to remove will be displayed in this area -->
+    <string name="remove_tags_hint_text">Labels die verwijderd worden</string>
+    <!-- Message indicating tags to add will be displayed in this area -->
+    <string name="add_before_tags_hint_text">Labels toe te voegen voor bestaande</string>
+    <!-- Message indicating tags to add will be displayed in this area -->
+    <string name="add_after_tags_hint_text">Labels toe te voegen na bestaande</string>
+    <!-- Action to add tags before a place's existing tags -->
+    <string name="add_before">Toevoegen ervoor</string>
+    <!-- Action to add tags after a place's existing tags -->
+    <string name="add_after">Toevoegen erna</string>
+    <string name="bulk_edit_tags_help_screen_1">Iedere plaats kan meerdere labels hebben, en deze hebben een specifieke volgorde.</string>
+    <string name="bulk_edit_tags_help_screen_2">Je kunt dus bij iedere plaats meerdere labels toevoegen, voor of na de reeds bestaande labels.</string>
+    <string name="bulk_edit_tags_help_screen_3">Je kunt ook bestaande labels verwijderen door in de toolbar de aanpassingsmodus te veranderen.</string>
+    <!-- Select places (to link together) screen title -->
+    <string name="select_linked_places_title">Plaatsen selecteren</string>
+    <!-- Hint message for a field to filter places in a list by a search query -->
+    <string name="linked_places_filter_text">Plaatsen filteren</string>
+    <!-- Action for editing/modifying the current linked places -->
+    <string name="linked_places_edit">Aanpassen</string>
+    <!-- Dialog title that explains that the user's Google Drive storage is full -->
+    <string name="gdrive_storage_full_title">Drive opslag is vol</string>
+    <!-- Dialog message that explains that the user's Google Drive storage is full -->
+    <string name="gdrive_storage_full_message">Je Google Drive opslag is vol, ScoutLog kan dus niet langer data synchroniseren.\n\nMaak ruimte vrij alvorens je opnieuw probeert te synchroniseren.</string>
+    <!-- Settings screen title -->
+    <string name="settings_main_title">Instellingen</string>
+    <!-- Settings screen title -->
+    <string name="settings_display_title">Instelligen: Weergave</string>
+    <!-- Settings screen title -->
+    <string name="settings_behavior_title">Gedrag</string>
+    <!-- Settings screen title -->
+    <string name="settings_sync_title">Synchronisatie</string>
+    <!-- Settings screen title -->
+    <string name="settings_integ_title">Importeren</string>
+    <!-- Settings screen title -->
+    <string name="settings_advanced_title">Geavanceerd</string>
+    <!-- Settings screen header -->
+    <string name="settings_advanced_category">Geavanceerd</string>
+    <!-- Sync Help screen header -->
+    <string name="sync_help_title">Hulp bij synchroniseren</string>
+    <!-- Sync Help header -->
+    <string name="sync_help_header_1">Hoe het werkt</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_1">Selecteer een Google Account, en ScoutLog zal een map aanmaken in Drive voor het opslaan van je plaatsen, labels en foto\'s. Vink de optie \"Automatisch synchroniseren\" aan om ScoutLog periodiek te laten synchroniseren met Drive.</string>
+    <!-- Sync Help header -->
+    <string name="sync_help_header_2">Probleemoplossing</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_2a">Als een gedeelte van je data niet gesynchroniseerd lijkt te worden met Google Drive, zou er een probleem kunnen zijn met de metadata. Om efficiëntie te maximaliseren bewaart ScoutLog metadata om bij te kunnen houden welke data is veranderd sinds de vorige synchronisatie. Gebruik de knop hieronder om de metadata te wissen en een volledige synchronisatie uit te voeren.</string>
+    <!-- Action to execute a full sync to Google Drive -->
+    <string name="full_sync_button">Volledige synchronisatie uitvoeren</string>
+    <!-- Sync Help text -->
+    <string name="sync_help_text_2b">Als synchroniseren vaak mislukt, kun je mij (de ontwikkelaar) een e-mail sturen. Deze e-mail bevat anonieme informatie over recente synchronisatie fouten die me kan helpen bestaande problemen op te lossen.</string>
+    <!-- Action to email me (the developer) to debug the sync issues -->
+    <string name="sync_email_button">E-mail mij om het probleem op te lossen</string>
+    <!-- Integration Help screen header -->
+    <string name="integ_help_title">Hulp bij importeren</string>
+    <!-- Integration Help header -->
+    <string name="integ_help_header_1">Hoe het werkt</string>
+    <!-- Integration Help text -->
+    <string name="integ_help_text_1">Deel een bestand naar ScoutLog om de data ervan te importeren. Momenteel worden alleen GPX en Google Bookmark bestanden ondersteund. Als je problemen hebt met het importeren of hulp wil bij een bestandsvorm kun je mij e-mailen.</string>
+    <!-- Action to email me (the developer) -->
+    <string name="integ_email_button">E-mail mij</string>
+    <!-- Integration Help header -->
+    <string name="integ_help_header_2">Importeren van Google Maps favorieten</string>
+    <!-- Integration Help text -->
+    <string name="integ_help_text_2">Om favorieten te importeren uit Google Maps open je %1$s in een browser en klik je op \"Bookmarks exporteren\". De site lijkt niet goed ontworpen te zijn voor mobiele apparaten dus het is misschien makkelijker dit te doen vanaf een computer. De link zou een download moeten starten voor een bestand dat je vervolgens kunt delen naar ScoutLog.</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_display">Weergave</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_behavior">Gedrag</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_sync">Synchroniseren naar Google Drive</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_integ">Importeren</string>
+    <!-- Action item to open settings screen -->
+    <string name="pref_category_advanced">Geavanceerd</string>
+    <!-- Option to contact me to help translate the app -->
+    <string name="pref_help_translate_title">Helpen met vertalen</string>
+    <!-- Option to contact me to help translate the app -->
+    <string name="pref_help_translate_summary">E-mail mij om ScoutLog te helpen vertalen!</string>
+    <!-- Message to rate and review the app on the Play Store -->
+    <string name="review_app_message">Vindt je ScoutLog leuk? Beoordeel het alsjeblieft in de Play Store!</string>
+    <!-- Action to open the Play Store page to rate/review the app -->
+    <string name="review_app_action">Beoordelen</string>
+    <!-- Option to select distance units (kilometers vs miles) -->
+    <string name="pref_measurement">Afstandsmaten</string>
+    <string-array name="pref_measurement_display_arr">
+        <item>Metrisch systeem (m, km)</item>
+    <!-- Distance units option (meters, kilometers) -->
+        <item>Amerikaans systeem (ft, mi)</item>
+    </string-array>
+    <!-- Option to select theme (light or dark) -->
+    <string name="pref_theme">Stijl</string>
+    <string-array name="pref_theme_display_arr">
+    <!-- Theme option -->
+        <item>Licht</item>
+    <!-- Theme option -->
+        <item>Donker</item>
+    </string-array>
+    <!-- Option to select the default pin color for the map -->
+    <string name="pref_map_marker_color">Standaard pin kleur</string>
+    <!-- Action to use the original default pin color for the map -->
+    <string name="use_default">Gebruik standaard</string>
+    <!-- Option to automatically keep the map centered on the device's latitude/longitude coordinates -->
+    <string name="pref_sticky_current_location_title">Volg je locatie</string>
+    <!-- Option to automatically keep the map centered on the device's latitude/longitude coordinates -->
+    <string name="pref_sticky_current_location_summary">Als dit is ingeschakeld zal de kaart gecentreerd blijven op de locatie van je apparaat, ook als je je verplaatst</string>
+    <!-- Option to display "discard unsaved changes" warning dialog -->
+    <string name="pref_notify_unsaved_changes_title">Waarschuwing voor niet opgeslagen aanpassingen</string>
+    <!-- Option to display "discard unsaved changes" warning dialog -->
+    <string name="pref_notify_unsaved_changes_summary">Toon een waarschuwingsbericht voordat niet opgeslagen aanpassingen worden weggegooid</string>
+    <!-- Option to display closest address for latitude/longitude coordinates -->
+    <string name="pref_show_closest_address_title">Toon het dichtstbijzijnde adres</string>
+    <!-- Option to display closest address for latitude/longitude coordinates -->
+    <string name="pref_show_closest_address_summary">Als een plaats alleen coördinaten heeft het dichtstbijzijnde adres tonen</string>
+    <!-- Option to display photos is the places list display view -->
+    <string name="pref_list_view_photos">Foto\'s tonen in lijstweergave</string>
+    <!-- Option to display tag color next to each place on the places list -->
+    <string name="pref_show_map_markers_title">Kleuren tonen in lijst met plaatsen</string>
+    <!-- Option to display tag color next to each place on the places list -->
+    <string name="pref_show_map_markers_summary">Als het eerste label van een plaats een kleur heeft deze tonen in de lijst en raster</string>
+    <!-- Option to select the number of pins that are shown together on the map without being grouped (when pins are grouped, it just shows a circle with a number telling how many pins are in that area of the map) -->
+    <string name="pref_cluster_threshold_title">Groeperen van pins</string>
+    <!-- Option to select the number of pins that are shown together on the map without being grouped (when pins are grouped, it just shows a circle with a number telling how many pins are in that area of the map) -->
+    <string name="pref_cluster_threshold_summary">Aantal pins die tegelijk op een kaart worden getoond zonder te worden samengevoegd\n\n%1$s</string>
+    <string-array name="pref_cluster_threshold_display_arr">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>Pins nooit samenvoegen</item>
+    </string-array>
+    <!-- Option to select Google account for syncing to Drive -->
+    <string name="pref_account_title">Account</string>
+    <!-- Option to select Google account for syncing to Drive -->
+    <string name="pref_account_summary">Inloggen bij een Google Account</string>
+    <!-- Option to let the app automatically sync data to Google Drive -->
+    <string name="pref_auto_sync_title">Automatisch synchroniseren</string>
+    <!-- Option to let the app automatically sync data to Google Drive -->
+    <string name="pref_auto_sync_summary">Periodiek synchroniseren met Google Drive om je apparaat up-to-date te houden.</string>
+    <!-- Dialog title asking the user to enable Android auto-sync for a Google account -->
+    <string name="auto_sync_dialog_title">Auto-sync inschakelen?</string>
+    <!-- Dialog message asking the user to enable Android auto-sync for a Google account -->
+    <string name="auto_sync_dialog_message">Auto-sync voor het gehele systeem moet worden ingeschakeld, wat betekent dat aanpassingen die je maakt in alle apps en accounts, niet alleen ScoutLog, zullen worden gesynchroniseerd.</string>
+    <!-- Action to enable Android auto-sync for a Google account -->
+    <string name="turn_on_auto_sync">Inschakelen</string>
+    <!-- Action to sync data to Google Drive right now -->
+    <string name="pref_sync_now_title">Nu synchroniseren</string>
+    <!-- Message indicating the last date & time the app synced data to Google Drive -->
+    <string name="pref_sync_now_summary">Laatst gesynchroniseerd: %1$s</string>
+    <!-- Error message indicating the app encountered an error when trying to sync data to Google Drive -->
+    <string name="pref_sync_now_summary_error">Er is een probleem opgetreden bij het synchroniseren, probeer het later opnieuw</string>
+    <!-- Error message indicating the app encountered an error when trying to connect to Google -->
+    <string name="pref_sync_now_summary_google_error">Er is een probleem opgereden bij het verbinden met Google, probeer het later opnieuw</string>
+    <!-- Option for how to store photos -->
+    <string name="pref_photo_storage_title">Foto opslag</string>
+    <!-- Option for how to store photos: Either all photos will be saved to the device or no photos created through the app will be saved to the device after they are synced -->
+    <string-array name="pref_photo_storage_display_arr">
+    <!-- Option for how to store photos: Either all photos will be saved to the device or no photos created through the app will be saved to the device after they are synced -->
+        <item>Download foto\'s naar de apparaatopslag om ze offline beschikbaar te maken</item>
+    <!-- Option for how to store photos: Either all photos will be saved to the device or no photos created through the app will be saved to the device after they are synced -->
+        <item>Bewaar foto\'s alleen in de cloud om opslagruimte te besparen</item>
+    </string-array>
+    <!-- Option for skipping over duplicates during import (duplicate is defined as any place with the same latitude/longitude coordinates as an existing place) -->
+    <string name="pref_ignore_imported_duplicates_title">Duplicaten negeren</string>
+    <!-- Option for skipping over duplicates during import (duplicate is defined as any place with the same latitude/longitude coordinates as an existing place) -->
+    <string name="pref_ignore_imported_duplicates_summary">Geïmporteerde plaatsen waarvan de coördinaten al verbonden zijn aan bestaande plaatsen worden genegeerd</string>
+    <!-- Message indicating that the app is currently loading files from the device -->
+    <string name="import_loading_files">Bestanden laden…</string>
+    <!-- Message indicating ScoutLog is trying to import a single place -->
+    <string name="importing_place">Plaats importeren…</string>
+    <!-- Error message indicating data that was imported to ScoutLog wasn't recognized -->
+    <string name="import_data_not_recognized">Data gedeeld met ScoutLog wordt niet herkend</string>
+    <!-- Error message indicating data that was imported to ScoutLog wasn't recognized -->
+    <string name="import_failed">Importeren van de data is mislukt</string>
+    <!-- Notification here refers to an Android notification that's displayed during the import process -->
+    <string name="import_started">Importeren gestart, zie notificatie voor details</string>
+    <!-- Notification title indicating the app is currently in the process of saving places from a file -->
+    <string name="import_notification_title">Plaatsen importeren</string>
+    <!-- Notification message indicating the app is currently in the process of saving places from a file -->
+    <string name="import_notification_message">Plaatsen aan het importeren vanuit het bestand</string>
+    <!-- Notification title indicating the app has completed the process of saving places from a file -->
+    <string name="import_complete_notification_title">Importeren is compleet</string>
+    <!-- Notification message indicating how many places were imported into ScoutLog. Example: "2 places imported" -->
+    <plurals name="import_complete_notification_message_imported">
+        <item quantity="one">%1$d plaats geïmporteerd</item>
+        <item quantity="other">%1$d plaatsen geïmporteerd</item>
+    </plurals>
+    <!-- Notification message indicating how many places were ignored from being imported. Example: "2 places ignored" -->
+    <plurals name="import_complete_notification_message_ignored">
+        <item quantity="one">%1$d plaats genegeerd</item>
+        <item quantity="other">%1$d plaatsen genegeerd</item>
+    </plurals>
+    <!-- Notification title indicating the app has encountered an error during the import process -->
+    <string name="import_failed_title">Fout bij importeren</string>
+    <!-- Notification message indicating the app has encountered an error during the import process -->
+    <string name="import_failed_message">Er is een fout opgetreden, dit bestandstype wordt misschien niet ondersteund. Klik om mij te e-mailen voor hulp.</string>
+    <!-- Option to enable advanced feature where places can be directly linked to each other -->
+    <string name="pref_enable_linked_places_title">Linken van plaatsen inschakelen</string>
+    <!-- Option to enable advanced feature where places can be directly linked to each other -->
+    <string name="pref_enable_linked_places_summary">Maakt het mogelijk meerdere plaatsen aan elkaar te linken in het detail scherm</string>
+    <!-- Option to allow the app to send anonymous data to Google Analytics -->
+    <string name="pref_reporting_title">Verbeter ScoutLog</string>
+    <!-- Option to allow the app to send anonymous data to Google Analytics -->
+    <string name="pref_reporting_summary">Help ScoutLog te verbeteren door anonieme gebruiksinformatie te versturen</string>
+    <!-- Option to unlock the app's free trial with a purchase -->
+    <string name="pref_unlock_title">ScoutLog ontgrendelen</string>
+    <!-- Option to unlock the app's free trial with a purchase -->
+    <string name="pref_unlock_summary">Schaf de ontgrendelde versie aan voor complete toegang tot ScoutLog</string>
+    <!-- Action to open the About screen -->
+    <string name="pref_about_title">Over</string>
+    <!-- About screen title -->
+    <string name="about_title">Over</string>
+    <!-- v is short for "version"; for example: v1.3 -->
+    <string name="about_version">v%1$s</string>
+    <!-- Message indicating who created the app's icon -->
+    <string name="about_credit">App logo door %1$s</string>
+    <string name="about_concerns">Vragen, commentaar, zorgen?</string>
+    <!-- Action to open an email app to email the developer -->
+    <string name="about_email">E-mail me!</string>
+    <!-- Action to view the licenses for open source projects used in this app -->
+    <string name="about_licenses">Open source licenties</string>
+    <!-- Action to open an email app to email the developer -->
+    <string name="send_email">Stuur e-mail</string>
+    <!-- Error message indicating there are no email apps installed on the device -->
+    <string name="no_email_apps">Er zijn geen e-mail applicaties geïnstalleerd op je apparaat.</string>
+    <!-- Unlock dialog title -->
+    <string name="unlock_app_title">Ontgrendel meer functies</string>
+    <!-- Unlock dialog message indicating user is using a limited free trial -->
+    <string name="unlock_app_places_10_message">In de gratis versie van deze app kun je maar een beperkt aantal plaatsen aanmaken.\n\nSchaf de ontgrendelde versie aan om complete toegang te krijgen tot alle functies.</string>
+    <!-- Unlock dialog message indicating user is using a limited free trial -->
+    <string name="unlock_app_places_15_message">Je hebt het maximum aantal plaatsen in de gratis versie van deze app bereikt!\n\nSchaf de ontgrendelde versie aan om complete toegang te krijgen tot alle functies.</string>
+    <!-- Action to purchase the unlocked version of this app -->
+    <string name="unlock_app_yes">App ontgrendelen</string>
+    <!-- Action to extend the trial by allowing the user to create 5 more places -->
+    <string name="unlock_app_extension">Geef me er nog 5</string>
+    <!-- Action to close the unlock dialog -->
+    <string name="unlock_app_no">Annuleren</string>
+</resources>

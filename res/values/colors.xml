@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="translucent_black">#33000000</color>
+
+    <color name="window_background_light">#D8D8D8</color>
+    <color name="window_background_dark">#000000</color>
+    <color name="background_light">#D8D8D8</color>
+    <color name="background_dark">#000000</color>
+
+    <color name="primary_color">#FF006688</color>
+    <color name="translucent_primary_color">#88006688</color>
+    <color name="primary_dark_color">#004d66</color>
+    <color name="accent_color_light">#09c</color>
+    <color name="accent_color_dark">#3cf</color>
+
+    <color name="no_photo_set_light">#BBBBBB</color>
+    <color name="no_photo_set_dark">#333333</color>
+
+    <color name="color_picker_thumb_1">#09c</color>
+    <color name="color_picker_thumb_2">#008cbb</color>
+
+    <color name="card_separator_background_light">#D8D8D8</color>
+    <color name="card_separator_background_dark">#555555</color>
+    <color name="separator_background_light">#BBBBBB</color>
+    <color name="separator_background_dark">#333333</color>
+
+    <!-- Currently unused -->
+    <color name="alt_accent_color_light">#F57F17</color>
+    <color name="alt_accent_color_dark">#FFEB3B</color>
+
+    <!-- DateTimePicker -->
+    <color name="mdtp_accent_color">@color/accent_color_light</color>
+    <color name="mdtp_accent_color_dark">@color/primary_color</color>
+
+    <!-- Nav drawer -->
+    <color name="nav_drawer_background_light">#D8D8D8</color>
+    <color name="nav_drawer_background_dark">#333333</color>
+    <color name="nav_drawer_selected_text_color">#0099CC</color>
+
+    <!-- Create tab -->
+    <color name="add_location_button_foreground">#FFFFFF</color>
+    <color name="gallery_placeholder">#777777</color>
+
+    <!-- Card colors -->
+    <color name="card_background_light">#FFFFFF</color>
+    <color name="card_background_dark">#3F3F3F</color>
+    <color name="card_shadow_light_1">#B4B4B4</color>
+    <color name="card_shadow_light_2">#BBBBBB</color>
+    <color name="card_shadow_dark_1">#282828</color>
+    <color name="card_shadow_dark_2">#222222</color>
+
+    <!-- Snackbar colors -->
+    <color name="snackbar_text_light">#FFFFFF</color>
+    <color name="snackbar_text_dark">#FFFFFF</color>
+    <color name="snackbar_button_light">#F4B400</color>
+    <color name="snackbar_button_dark">#F4B400</color>
+    <color name="snackbar_background_light">#323232</color>
+    <color name="snackbar_background_dark">#323232</color>
+
+    <!-- Tag chip colors -->
+    <color name="tag_chip_background_light">#BBBBBB</color>
+    <color name="tag_chip_background_dark">#3F3F3F</color>
+
+    <color name="card_inline_alert_message_background">#FDD835</color>
+    <color name="address_help_message_background">#DDFDD835</color>
+
+    <color name="radio_header_background_light">#BBBBBB</color>
+    <color name="radio_header_background_dark">#333333</color>
+
+    <color name="swipe_action_background_light">#F57F17</color>
+    <color name="swipe_action_background_dark">#F57F17</color>
+
+    <color name="error_text_light">#B00</color>
+    <color name="error_text_dark">#F55</color>
+</resources>
